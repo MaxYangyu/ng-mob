@@ -1,0 +1,511 @@
+/*body {
+  background: url("../img/背景.png") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}*/
+#Thank {
+  background: url("../img/背景1.jpg") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+#Thank footer {
+  height: 1.3rem;
+  line-height: 1.3rem;
+  text-align: center;
+  margin: 0 auto;
+  font-size: .26rem;
+  font-family: PingFangSC-Regular;
+  color: #764c1f;
+}
+#Thank .none {
+  display: none;
+}
+#Thank header > img {
+  width: 100%;
+}
+#Thank .activity {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  text-align: center;
+}
+#Thank .activity .active-title {
+  position: absolute;
+  top: -0.65rem;
+  left: 32%;
+}
+#Thank .activity .active-title > i {
+  display: inline-block;
+  width: 2.67rem;
+  height: .76rem;
+  background: url("../img/活动专属礼物@2x.png") no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+#Thank .activity .active-body {
+  margin: 0 auto;
+  width: 6.24rem;
+  height: 2.61rem;
+  line-height: 2rem;
+  background: url("../img/专属礼物框@2x.png") no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+#Thank .activity .active-body img {
+  width: 1.41rem;
+  height: .94rem;
+}
+#Thank .activity .active-body .active-name {
+  position: absolute;
+  top: .9rem;
+  left: 2.38rem;
+  display: inline-block;
+  font-size: .32rem;
+  font-family: PingFangSC-Regular;
+  color: #764c1f;
+}
+#Thank .activity .active-body .active-name span {
+  display: inline-block;
+}
+#Thank .activity .active-body .active-name span:nth-child(2) {
+  margin-left: 1.12rem;
+}
+#Thank .activity .active-footer img:nth-child(1) {
+  width: .59rem;
+  height: .8rem;
+  position: absolute;
+  top: .07rem;
+  left: .49rem;
+}
+#Thank .activity .active-footer img:nth-child(2) {
+  width: 1.38rem;
+  height: 1.46rem;
+  position: absolute;
+  left: .2rem;
+  bottom: -0.5rem;
+}
+#Thank .activity .active-footer img:nth-child(3) {
+  width: .65rem;
+  height: 1.21rem;
+  position: absolute;
+  right: .36rem;
+  bottom: .8rem;
+}
+#Thank .activity .active-footer img:nth-child(4) {
+  width: .73rem;
+  height: 1rem;
+  position: absolute;
+  right: .25rem;
+}
+#Thank .name-list {
+  position: relative;
+  text-align: center;
+  margin-top: 1.2rem;
+}
+#Thank .name-list .select-box {
+  position: absolute;
+  top: -0.7rem;
+  left: 1.55rem;
+}
+#Thank .name-list .select-box .anchor {
+  display: inline-block;
+  width: 1.99rem;
+  height: .69rem;
+}
+#Thank .name-list .select-box .player {
+  display: inline-block;
+  width: 1.95rem;
+  height: .69rem;
+}
+#Thank .name-list .select-box .act {
+  width: 2.23rem;
+  height: .78rem;
+}
+#Thank .name-list .anchor-list {
+  width: 6.87rem;
+  margin: 0 auto;
+  text-align: center;
+  background: url("../img/形状-2@2x.png") no-repeat;
+  -webkit-background-size: 6.87rem auto;
+  background-size: 6.87rem auto;
+}
+#Thank .name-list .anchor-list .list-box {
+  font-size: .24rem;
+}
+#Thank .name-list .anchor-list .list-box .list-name {
+  padding-top: .81rem;
+}
+#Thank .name-list .anchor-list .list-box .list-name span {
+  display: inline-block;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #764C1F;
+}
+#Thank .name-list .anchor-list .list-box .list-name span:nth-child(1) {
+  /*margin-left: 0.38rem;*/
+}
+#Thank .name-list .anchor-list .list-box .list-name span:nth-child(2) {
+  margin-left: .9rem;
+}
+#Thank .name-list .anchor-list .list-box .list-name span:nth-child(3) {
+  padding-right: .25rem;
+  margin-left: 1.85rem;
+}
+#Thank .name-list .anchor-list .list-box .list-name span:nth-child(4) {
+  margin-left: 1.4rem;
+}
+#Thank .name-list .anchor-list .list-box .list-data {
+  margin-top: 0.5rem;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #fad978;
+}
+#Thank .name-list .anchor-list .list-box .list-data > span {
+  display: inline-block;
+  font-size: .26rem;
+  font-family: PingFangSC-Regular;
+  color: #764C1F;
+  margin-left: 0.4rem;
+  vertical-align: sub;
+}
+#Thank .name-list .anchor-list .list-box .list-data .sz {
+  font-size: .30rem;
+  font-weight: 700;
+  color: #764C1F;
+}
+#Thank .name-list .anchor-list .list-box .list-data > div {
+  margin-left: 0.7rem;
+  position: relative;
+  display: inline-block;
+}
+#Thank .name-list .anchor-list .list-box .list-data > div .ps {
+  position: relative;
+}
+#Thank .name-list .anchor-list .list-box .list-data > div .img {
+  margin-left: 0.14rem;
+  width: .98rem;
+  height: .98rem;
+  border-radius: 50%;
+  z-index: 999;
+}
+#Thank .name-list .anchor-list .list-box .list-data > div .one {
+  margin: 0;
+  width: 1.14rem;
+  height: 1.14rem;
+  border: 0.02rem solid #FFCB2C;
+}
+#Thank .name-list .anchor-list .list-box .list-data > div .two {
+  margin: 0;
+  width: 1.14rem;
+  height: 1.14rem;
+  border: 0.02rem solid #CFD1D2;
+}
+#Thank .name-list .anchor-list .list-box .list-data > div .three {
+  margin: 0;
+  width: 1.14rem;
+  height: 1.14rem;
+  border: 0.02rem solid #AD7C64;
+}
+#Thank .name-list .anchor-list .list-box .list-data > div span {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  width: .96rem;
+  height: .26rem;
+  font-size: .20rem;
+  font-family: PingFangSC-Medium;
+  color: #1F1F1F;
+  line-height: .26rem;
+  background: #FECA40;
+  bottom: 0;
+  left: 8%;
+  z-index: 9999;
+}
+#Thank .name-list .anchor-list .list-box .list-data > div .hg {
+  position: absolute;
+  width: .65rem;
+  height: .6rem;
+  z-index: 21;
+  top: -0.2rem;
+  left: -0.24rem;
+}
+#Thank .name-list .anchor-list .list-box .list-data > div .bg {
+  position: absolute;
+  width: 1.32rem;
+  height: .25rem;
+  z-index: 22;
+  left: -6%;
+  bottom: 0.05rem;
+}
+#Thank .name-list .anchor-list .list-box .list-data .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: 2.10rem;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #764C1F;
+  text-align: center;
+  padding-left: 0.165rem;
+  /* margin-left: 0.1rem;*/
+}
+#Thank .name-list .anchor-list .list-box .list-data b {
+  display: inline-block;
+  font-weight: 400;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #764C1F;
+  margin-left: 0.38rem;
+  text-align: center;
+  width: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: sub;
+}
+#Thank .name-list .anchor-list .list-box div:last-child {
+  padding-bottom: 0.5rem;
+}
+#Thank .name-list .anchor-list .foot {
+  width: 6.8rem;
+  margin: 0 0.07rem;
+  height: 1.57em;
+  line-height: 1.57rem;
+  border-radius: 0 0 .6rem 0;
+  background-color: #FFB699;
+}
+#Thank .name-list .anchor-list .foot img {
+  width: 1.14rem;
+  height: 1.14rem;
+  border-radius: 50%;
+}
+#Thank .name-list .anchor-list .foot span {
+  margin-left: 0.39rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: 2rem;
+  font-size: .26rem;
+  font-family: PingFangSC-Regular;
+  color: #764C1F;
+  text-align: left;
+  vertical-align: middle;
+}
+#Thank .name-list .anchor-list .foot i {
+  display: inline-block;
+  vertical-align: top;
+  font-size: .26rem;
+  font-family: PingFangSC-Regular;
+  color: #764C1F;
+  vertical-align: middle;
+  margin-left: 1.1rem;
+}
+#Thank .name-list .select-footer img:nth-child(1) {
+  width: .69rem;
+  height: 1.25rem;
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0.16rem;
+}
+#Thank .name-list .select-footer img:nth-child(2) {
+  width: 1.27rem;
+  height: 1.14rem;
+  position: absolute;
+  bottom: -0.54rem;
+  right: 0.91rem;
+}
+#Thank .name-list .select-footer img:nth-child(3) {
+  width: .76rem;
+  height: 1.48rem;
+  position: absolute;
+  bottom: -0.5rem;
+  right: 0.1rem;
+}
+#Thank .name-list .select-footer img:nth-child(4) {
+  width: 1.15rem;
+  height: 1.84rem;
+  position: absolute;
+  top: 4.75rem;
+  left: 0;
+}
+#Thank .name-list .select-footer img:nth-child(5) {
+  width: .71rem;
+  height: 1.72rem;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+}
+#Thank .gz {
+  margin-top: 1.2rem;
+  position: relative;
+}
+#Thank .gz .gz-title {
+  position: absolute;
+  top: -0.65rem;
+  left: 2.5rem;
+  text-align: center;
+}
+#Thank .gz .gz-title i {
+  width: 2.68rem;
+  height: .76rem;
+  display: inline-block;
+  background: url("../img/玩法及奖励@2x.png") no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+#Thank .gz .gz-box {
+  width: 6.87rem;
+  margin: 0 auto;
+  padding-top: 0.8rem;
+  padding-left: 0.93rem;
+  padding-right: 0.43rem;
+  background: url("../img/形状-2@2x.png") no-repeat;
+  -webkit-background-size: 6.87rem 16.2rem;
+  background-size: 6.87rem 16.2rem;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #764c1f;
+}
+#Thank .gz .gz-box .info p:nth-child(1) {
+  font-size: .28rem;
+  font-weight: 700;
+  font-family: STYuanti-SC-Bold;
+  color: #764c1f;
+}
+#Thank .gz .gz-box .info p:nth-child(2) {
+  margin-top: 0.22rem;
+  margin-bottom: .41rem;
+}
+#Thank .gz .gz-box .info p:nth-child(2) span:nth-child(1) {
+  margin-top: 0.02rem;
+  margin-right: .15rem;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  font-size: .22rem;
+  font-family: PingFangSC-Medium;
+  color: #764c1f;
+  width: .28rem;
+  height: .28rem;
+  line-height: .3rem;
+  background: #ff8053;
+  position: absolute;
+  left: 0.9rem;
+}
+#Thank .gz .gz-box .info p:nth-child(2) span:nth-child(2) {
+  width: 4.9rem;
+  display: inline-block;
+}
+#Thank .gz .gz-box .info p:nth-child(3) {
+  margin-top: 0.41rem;
+}
+#Thank .gz .gz-box .info p:nth-child(3) span:nth-child(1) {
+  margin-top: 0.02rem;
+  margin-right: .15rem;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  font-size: .22rem;
+  font-family: PingFangSC-Medium;
+  color: #764c1f;
+  width: .28rem;
+  height: .28rem;
+  line-height: .3rem;
+  background: #ff8053;
+  position: absolute;
+  left: 0.9rem;
+}
+#Thank .gz .gz-box .info p:nth-child(3) span:nth-child(2) {
+  width: 5rem;
+  display: inline-block;
+}
+#Thank .gz .gz-box .info p:nth-child(4) {
+  margin-top: 0.41rem;
+}
+#Thank .gz .gz-box .info p:nth-child(4) span:nth-child(1) {
+  margin-top: 0.02rem;
+  margin-right: .15rem;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  font-size: .22rem;
+  font-family: PingFangSC-Medium;
+  color: #764c1f;
+  width: .28rem;
+  height: .28rem;
+  line-height: .3rem;
+  background: #ff8053;
+  position: absolute;
+  left: 0.9rem;
+}
+#Thank .gz .gz-box .info p:nth-child(4) span:nth-child(2) {
+  width: 5rem;
+  display: inline-block;
+}
+#Thank .gz .gz-box .jl {
+  color: #FF7240;
+}
+#Thank .gz .gz-box .jl > p {
+  margin-top: 0.43rem;
+  font-size: .28rem;
+  font-weight: 700;
+  font-family: STYuanti-SC-Bold;
+  color: #764c1f;
+}
+#Thank .gz .gz-box .jl .box {
+  margin-top: 0.23rem;
+  width: 5.34rem;
+  border: 0.02rem solid #FF7240;
+}
+#Thank .gz .gz-box .jl .box p span:nth-child(1) {
+  display: inline-block;
+  width: 1.7rem;
+  text-align: center;
+  line-height: .65rem;
+  border-right: 0.02rem solid #ff7240;
+  border-bottom: 0.02rem solid #ff7240;
+}
+#Thank .gz .gz-box .jl .box p span:nth-child(2) {
+  display: inline-block;
+  width: 3.6rem;
+  text-align: center;
+  line-height: .65rem;
+  border-bottom: 0.02rem solid #ff7240;
+}
+#Thank .gz .gz-box .jl .box p:last-child span:nth-child(1) {
+  border-bottom: none;
+}
+#Thank .gz .gz-box .jl .box p:last-child span:nth-child(2) {
+  border-bottom: none;
+}
+#Thank .gz .gz-footer img:nth-child(1) {
+  width: .71rem;
+  height: .75rem;
+  position: absolute;
+  top: 1.27rem;
+  right: 0.05rem;
+}
+#Thank .gz .gz-footer img:nth-child(2) {
+  width: .89rem;
+  height: 1.24rem;
+  position: absolute;
+  bottom: -0.21rem;
+  left: 0;
+}
+#Thank .gz .gz-footer img:nth-child(3) {
+  width: 1rem;
+  height: 1.34rem;
+  position: absolute;
+  bottom: -0.66rem;
+  right: 0;
+}
+#Thank .btn {
+  width: .68rem;
+  height: 2.07rem;
+  position: fixed;
+  top: 3.8rem;
+  right: 0;
+}

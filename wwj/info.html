@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>详情</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="info">
+    <header>
+        <a href="index.html" class="backhome"></a>
+        <div class="room-hd-collect-room">
+            <div class="room-hd-collect-text">收藏</div>
+        </div>
+        <div class="room-hd-fix">
+            <div class="room-hd-fix-text">报修</div>
+        </div>
+        <div class="room-hd-list">
+            <ul>
+                <li title="S">
+                    <img src="img/100.jpg">
+                </li>
+            </ul>
+            <div class="room-hd-list-count">
+                <div class="room-hd-list-count-num">1人</div>
+                <div class="room-hd-list-count-sm">在房间</div>
+            </div>
+        </div>
+        <div class="room-hd-user">
+            <div class="room-hd-user-avatar">
+                <img src="img/100.jpg">
+            </div>
+            <div class="room-hd-user-name">hahaha</div>
+            <div class="room-hd-status">游戏中</div>
+        </div>
+    </header>
+    <canvas id="video-canvas"></canvas>
+    <div class="room-start">
+        <div class="room-start-msg"></div>
+        <div class="room-start-btn"></div>
+        <div class="room-start-my">我的钻石<br><span class="room-my-coin">38</span> <br><a href="javascript:void(0);"
+                                                                                       class="room-start-pay"><span
+                class="room-start-pay-icon"></span><span>充值</span></a></div>
+    </div>
+    <div class="room-action">
+        <div class="room-action-up" data-start="u" data-end="W"></div>
+        <div class="room-action-down" data-start="d" data-end="S"></div>
+        <div class="room-action-left" data-start="l" data-end="A"></div>
+        <div class="room-action-right" data-start="r" data-end="D"></div>
+        <div class="room-action-go" data-start="b"></div>
+    </div>
+    <div class="room-detail">
+        <div class="room-detail-hd">最近抓中记录</div>
+        <ul class="record-list">
+            <li>
+                <img src="img/100.jpg" alt="">
+                <span class="record-list-nickname ">ww</span>
+                <span class="record-list-time">18小时前</span>
+                <div class="record-list-btn">
+                    <i class="icon icon-caretright"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="js/rem.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jsmpeg.min.js"></script>
+<!--<script type="text/javascript">
+    var canvas = document.getElementById('video-canvas');
+    var url = 'ws://' + document + ':9090/';
+    var player = new JSMpeg.Player(url, {canvas: canvas});
+</script>-->
+<script>
+    $(function () {
+        $('.room-start-btn').click(function () {
+            $('.room-start').hide()
+            $('.room-action').show()
+            var websocket = new WebSocket('ws://123.59.141.238:9090');
+            websocket.onopen = function (ev) {
+                console.log('opening')
+                websocket.send('CMD:START;');
+                $('.room-action-up').on('touchstart',function () {
+                    $(this).addClass('active');
+                    websocket.send('CMD:UP;') ;
+                    console.log('ws up')
+                })
+                $('.room-action-up').on('touchend',function () {
+                    $(this).removeClass('active');
+                    websocket.send('CMD:STOP;') ;
+                    console.log('ws up end')
+                })
+                $('.room-action-down').on('touchstart',function () {
+                    $(this).addClass('active');
+                    websocket.send('CMD:DOWN;') ;
+                    console.log('ws down')
+                })
+                $('.room-action-down').on('touchend',function () {
+                    $(this).removeClass('active');
+                    websocket.send('CMD:STOP;') ;
+                    console.log('ws down end')
+                })
+                $('.room-action-left').on('touchstart',function () {
+                    $(this).addClass('active');
+                    websocket.send('CMD:LEFT;') ;
+                    console.log('ws LEFT')
+                })
+                $('.room-action-left').on('touchend',function () {
+                    $(this).removeClass('active');
+                    websocket.send('CMD:STOP;') ;
+                    console.log('ws LEFT end')
+                })
+                $('.room-action-right').on('touchstart',function () {
+                    $(this).addClass('active');
+                    websocket.send('CMD:RIGHT;') ;
+                    console.log('ws RIGHT')
+                })
+                $('.room-action-right').on('touchend',function () {
+                    $(this).removeClass('active');
+                    websocket.send('CMD:STOP;') ;
+                    console.log('ws RIGHT end')
+                })
+                $('.room-action-go').on('touchstart',function () {
+                    $(this).addClass('active');
+                    websocket.send('CMD:OK;') ;
+                    console.log('ws OK')
+                })
+                $('.room-action-go').on('touchend',function () {
+                    $(this).removeClass('active');
+                    websocket.send('CMD:STOP;') ;
+                    console.log('ws OK end')
+                })
+
+            }
+            websocket.onmessage = function (ev) {
+                console.log(ev.data)
+            }
+        })
+
+    })
+</script>
+</html>

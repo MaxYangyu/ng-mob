@@ -1,0 +1,269 @@
+@font-face {
+  font-family: time-font;
+  src: url('../font/HelveticaNeue-BoldCond.otf') format('OpenType');
+  font-weight: normal;
+  font-style: normal;
+}
+body{
+  background-color: #f1f1f1;
+}
+header {
+  position: relative;
+  background-color: #fff;
+  .time{
+    padding: 0;
+    margin: 0 ;
+    color: #f60549;
+    font-size:0.48rem;
+    font-family: 'time-font';
+    text-align: center;
+    font-weight: 700;
+    padding-top: 0.44rem;
+  }
+  p:nth-child(2){
+    padding: 0;
+    margin: 0;
+    padding-top: 0.2rem;
+    text-align: center;
+    font-size: 0.28rem;
+    letter-spacing: 0.05rem;
+    color: rgb(120,130,150);
+  }
+  img{
+    width: 0.26rem;
+    height: 0.14rem;
+    position: absolute;
+    bottom: 0.38rem;
+    right: 0.34rem;
+  }
+}
+.list{
+  padding-top: 0.7rem;
+  background-color: #fff;
+  .row{
+
+    margin-left: 0.34rem;
+    margin-right: 0.34rem;
+
+    p{
+      font-family: time-font;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      color: rgb(120,130,150);
+      font-size: 0.28rem;
+      margin-bottom: 0.25rem;
+      letter-spacing: 0.05rem;
+    }
+    h2{
+      font-weight: 700;
+      font-size: 0.48rem;
+      font-family:time-font;
+      text-align: center;
+      margin-top: 0.2rem;
+      margin-bottom: 0.15rem;
+    }
+    img{
+      display: block;
+      margin: 0 auto;
+      width: 0.34rem;
+      height: 0.34rem;
+      margin-top: 0.2rem;
+    }
+    .like{
+      border-bottom: 0.02rem solid #f1f1f1;
+      border-right: 0.02rem solid #f1f1f1;
+    }
+    .money{
+      border-bottom: 0.02rem solid #f1f1f1;
+    }
+    .dur{
+      border-right: 0.02rem solid #f1f1f1;
+      margin-bottom: 0.34rem;
+    }
+  }
+}
+.live{
+  margin-top: 0.2rem;
+  /*height: 2.68rem;*/
+  background-color: #fff;
+  .head{
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 0.5rem;
+    .live-img{
+      width: 0.25rem;
+      height: 0.25rem;
+      display: inline-block;
+      vertical-align: text-top;
+    }
+    span{
+      font-size:0.36rem;
+      margin: 0 0.25rem;
+    }
+  }
+  .m_t07{
+    margin-top: 0.7rem;
+  }
+}
+.m_t02{
+  margin-top: 0.2rem;
+}
+.line-wrapper{
+  background-color: #fff;
+  width: 100%;
+  height: 1.5rem;
+  overflow: hidden;
+  font-size:.28rem;
+  .line-scroll-wrapper{
+    white-space: nowrap;
+    height: 1.5rem;
+    clear: both;
+  }
+  .line-normal-wrapper{
+    width: 100%;
+    display: inline-block;
+    line-height: 1.5rem;
+    float: left;
+  }
+  .line-normal-icon-wrapper{
+    font-weight: 400;
+    margin-top: 0.55rem;
+    border-radius: 0.2rem;
+    border:0.01rem solid #f60549;
+    float: right;
+    width: 1.6rem;
+    height: 0.4rem;
+    line-height: 0.38rem;
+    font-size: 0.24rem;
+    color: #fff;
+    background-color: #f60549;
+    text-align: center;
+    vertical-align:middle;
+    margin-right: 0.34rem;
+  }
+  .line-normal-avatar-wrapper {
+    /*    width: 0.64rem;
+        height: 0.64rem;*/
+    float: left;
+    margin-left: 0.34rem;
+    img{
+      width: 0.64rem;
+      height: 0.64rem;
+      border-radius: 50%;
+    }
+  }
+  .line-normal-left-wrapper {
+    float: left;
+    overflow: hidden;
+  }
+  .line-normal-info-wrapper {
+    float: left;
+    margin-left: 0.34rem;
+  }
+  .line-normal-user-name {
+    font-size:0.28rem;
+    color: #1f1f25;
+  }
+  .line-normal-msg {
+    font-size: 0.26rem;
+    font-weight: 400;
+    height: 0.28rem;
+    line-height: 0.28rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #788296;
+    margin-top: 0.1rem;
+  }
+  .line-normal-time {
+    height: 28px;
+    line-height: 28px;
+    color: #999;
+    margin-top: 11px;
+  }
+}
+.purple{
+  background-color: #7200ff !important;
+  border: 0.01rem solid #7200ff !important;
+}
+/* 半透明的遮罩层 */
+#overlay {
+  background: #000;
+  filter: alpha(opacity=50); /* IE的透明度 */
+  opacity: 0.7;  /* 透明度 */
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display:none;
+}
+.day{
+  width: 100%;
+  position: absolute;
+  top:0;
+  background-color: #fff;
+  display: none;
+  z-index: 99999;
+  .day-head{
+    padding-top: .44rem;
+    z-index: 99999;
+    .day-img-l{
+      width: 0.17rem;
+      height: 0.3rem;
+      float: left;
+      margin-left: 0.68rem;
+      margin-top: 0.1rem;
+    }
+    .day-img-r{
+      width: 0.17rem;
+      height: 0.3rem;
+      float: right;
+      margin-right: 0.68rem;
+      margin-top: 0.1rem;
+    }
+    h2{
+      width: 4.7rem;
+      font-family: time-font;
+      padding: 0;
+      margin: 0 ;
+      color: #f60549;
+      font-size:0.48rem;
+      display: inline-block;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  .swiper-container{
+    padding-top: 0.78rem;
+    .swiper-wrapper{
+      .swiper-slide{
+        text-align: center;
+        font-size: 0.36rem;
+        color: rgb(120,130,150);
+      }
+      .swiper-slide-active{
+        line-height: 1rem;
+        color: rgb(31,31,37);
+        font-size: 0.48rem;
+        margin: 0.2rem 0;
+        background-color: rgba(120,130,150,0.2);
+      }
+    }
+  }
+  .close-div{
+    width: 100%;
+    height: 1rem;
+    border-top: 0.01rem solid rgb(241,241,241);
+    img{
+      width:0.48rem;
+      height:0.48rem;
+      margin: 0.25rem auto;
+      display: block;
+
+    }
+  }
+
+}

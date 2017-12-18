@@ -1,0 +1,236 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #FF6558;
+}
+
+.root {
+  .none {
+    display: none;
+  }
+  #overlay {
+    background: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none;
+  }
+  position: relative;
+  background-color: #FF6558;
+  font-size: .30rem;
+  font-family: PingFangSC-Regular;
+  color: rgba(255, 245, 120, 1);
+  header {
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+  }
+  .act-name {
+    font-weight: 400;
+    font-size: 0.3rem;
+    position: absolute;
+    top: 3.36rem;
+    left: 0.6rem;
+    line-height: 0.6rem;
+  }
+  form {
+    position: relative;
+    top: -0.5rem;
+    padding: 0 0.6rem;
+    #name, #tel {
+      color:rgba(255,85,71,1);
+      width: 2.46rem;
+      height: .52rem;line-height: .52rem;
+      background: rgba(255, 255, 255, 1);
+      border-radius: .25rem;
+      border: none;
+      padding-left: 0.2rem;
+      ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        font-size: .26rem;
+        font-family: PingFangSC-Regular;
+        color: rgba(255, 85, 71, 1);
+      }
+      :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        font-size: .26rem;
+        font-family: PingFangSC-Regular;
+        color: rgba(255, 85, 71, 1);
+      }
+      ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        font-size: .26rem;
+        font-family: PingFangSC-Regular;
+        color: rgba(255, 85, 71, 1);
+      }
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        font-size: .26rem;
+        font-family: PingFangSC-Regular;
+        color: rgba(255, 85, 71, 1);
+      }
+    }
+    p {
+      label {
+        font-size: 0.26rem;
+      }
+      margin-top: 0.3rem;
+      /*line-height: 0.52rem;*/
+      input {
+        margin-left: 0.2rem;
+        border: none;
+      }
+      textarea {
+        font-size:.26rem;
+        font-family:PingFangSC-Regular;
+        color:rgba(255,85,71,1);
+        width: 5.39rem;
+        height: 2.82rem;
+        line-height: 0.82rem;
+        padding-left: 0.2rem;
+        background: rgba(255, 255, 255, 1);
+        border-radius: .18rem;
+        resize: none;
+        vertical-align: text-top;
+        margin-left: 0.2rem;
+        border: none;
+      }
+      #btn {
+        display: block;
+        margin: 0 auto;
+        width: 3.10rem;
+        height: .76rem;
+        line-height: .76rem;
+        font-size: .32rem;
+        font-family: PingFangSC-Regular;
+        color: rgba(230, 79, 67, 1);
+        background: url("../img/圆角矩形-3@2x.png") no-repeat center;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
+    }
+  }
+  .act-info {
+    padding-left: 0.6rem;
+    font-size:.24rem;
+  }
+  footer {
+    font-size:.22rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(255,245,120,1);
+    i {
+      display: block;
+      margin: 0 auto;
+      width: 6.26rem;
+      height: 0.02rem;
+      background: rgba(255, 245, 120, 1);
+    }
+    margin-top: 0.85rem;
+    text-align: center;
+    line-height: 1.3rem;
+    background: url("../img/页尾.jpg") no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .mask-box {
+    z-index: 999;
+    position: fixed;
+    top: 3.67rem;
+    left: .82rem;
+    div {
+      width: 5.87rem;
+      height: 5.40rem;
+      background: url("../img/组-13@2x.png") no-repeat center;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+    #close {
+      border: none;
+      display: block;
+      margin: 0 auto;
+      width: 3.10rem;
+      height: .76rem;
+      font-size: .32rem;
+      font-family: PingFangSC-Regular;
+      color: #e64f43;
+      background: url(../img/圆角矩形-3@2x.png) no-repeat center;
+      -webkit-background-size: contain;
+      background-size: contain;
+      position: relative;
+      top: -1.23rem;
+    }
+  }
+
+}
+
+.wl {
+  font-size: .30rem;
+  font-family: PingFangSC-Regular;
+  color: rgba(255, 245, 120, 1);
+  header {
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+  }
+  .act-name {
+    font-weight: 400;
+    font-size: 0.3rem;
+    position: absolute;
+    top: 3.2rem;
+    left: 0.6rem;
+    line-height: 0.6rem;
+  }
+  > p {
+    position: relative;
+    top: -.9rem;
+    text-align: center;
+  }
+  .info {
+    position: relative;
+    top: -.5rem;
+    width: 6.10rem;
+    height: 3.09rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: .18rem;
+    margin: 0 auto;
+    padding-top: 1rem;
+    p {
+      text-align: center;
+      font-size: .30rem;
+      font-family: PingFangSC-Regular;
+      color: rgba(255, 85, 71, 1);
+    }
+    p:last-child {
+      margin-top: .27rem;
+      font-size: .26rem;
+      font-family: PingFangSC-Regular;
+      color: rgba(255, 85, 71, 1);
+    }
+  }
+  .wl-footer {
+    font-size: .24rem;
+    position: relative;
+    top: -.2rem;
+    padding-left: 0.6rem;
+    p:last-child {
+      margin-top: 0.2rem;
+    }
+  }
+  footer {
+    height: 4.02rem;
+    font-size: 0.2rem;
+    line-height: 7rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(255,245,120,1);
+    text-align: center;
+    background: url("../img/页尾2@2x.png") no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+}
+

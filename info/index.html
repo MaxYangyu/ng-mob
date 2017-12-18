@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>礼物寄送</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+         function load() {
+             if (window.localStorage.getItem('btn') !== null) {
+                 $('#btn').attr('disabled', true);
+                 window.location.href='info.html';
+             }
+         }
+    </script>
+</head>
+<body onload="load()">
+<div class="root">
+    <header>
+        <p>活动礼物寄送信息填写</p>
+    </header>
+    <form>
+        <p><label for="name">姓名:<input type="text" id="name" maxlength="4"/></label></p>
+        <p><label for="tel">手机号码:<input type="tel" id="tel" maxlength="11"></label></p>
+        <p><label for="site">地址:<textarea id="site" maxlength="50"></textarea></label></p>
+        <p><input type="button" value="提交" id="btn"></p>
+    </form>
+    <p>我们将在您提交后的7个工作日内发货</p>
+</div>
+</body>
+<script src="js/rem.js"></script>
+
+<script>
+    $(function () {
+        $('#btn').click(function () {
+            var telValue = $('#tel').val();
+            var re = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
+            if (!re.test(telValue)) {
+                alert("手机号码有误，请重填");
+                $('#tel').val('');
+                return false;
+            } else {
+                window.localStorage.setItem('btn', 'isOk');
+                $('#btn').attr('disabled', true);
+                alert('提交成功，请等待物流信息更新');
+                window.location.href = 'info.html';
+            }
+
+        })
+
+
+    })
+
+</script>
+</html>

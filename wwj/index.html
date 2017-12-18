@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/amazeui.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="app">
+    <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{"directionNav":false}'>
+        <ul class="am-slides">
+            <li>
+                <a href="http://www.baidu.com">
+                    <img src="img/w.png"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div data-am-widget="tabs" class="am-tabs am-tabs-default">
+        <ul class="am-tabs-nav am-cf">
+            <li class="am-active"><a href="[data-tab-panel-0]">热门</a></li>
+            <li class=""><a href="[data-tab-panel-1]">已收藏</a></li>
+
+        </ul>
+        <div class="am-tabs-bd">
+            <div data-tab-panel-0 class="am-tab-panel am-active">
+                <ul>
+                    <li>
+                        <div>
+                            <img src="img/bg.png" height="400" width="400"/>
+                            <h3>鱼骨头北极熊027</h3>
+                            <div>
+                                <i class="btn-onidling">
+                                    <span>空闲中</span>
+                                </i>
+                                <span>20钻石/次</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="img/bg.png" height="400" width="400"/>
+                            <h3>鱼骨头北极熊027</h3>
+                            <div>
+                                <i class="btn-ongame">
+                                    <span>游戏中</span>
+                                </i>
+                                <span>20钻石/次</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="img/bg.png" height="400" width="400"/>
+                            <h3>鱼骨头北极熊027</h3>
+                            <div>
+                                <i>
+                                    <span>空闲中</span>
+                                </i>
+                                <span>20钻石/次</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="img/bg.png" height="400" width="400"/>
+                            <h3>鱼骨头北极熊027</h3>
+                            <div>
+                                <i>
+                                    <span>空闲中</span>
+                                </i>
+                                <span>20钻石/次</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="img/bg.png" height="400" width="400"/>
+                            <h3>鱼骨头北极熊027</h3>
+                            <div>
+                                <i>
+                                    <span>空闲中</span>
+                                </i>
+                                <span>20钻石/次</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="img/bg.png" height="400" width="400"/>
+                            <h3>鱼骨头北极熊027</h3>
+                            <div>
+                                <i>
+                                    <span>空闲中</span>
+                                </i>
+                                <span>20钻石/次</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div data-tab-panel-1 class="am-tab-panel ">
+                <p>亲亲还没有收藏娃娃吆，<br>赶紧去收藏喜欢的娃娃吧！</p>
+                <i class="follow-room-btn"></i>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/rem.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/amazeui.js"></script>
+<script>
+    $(function () {
+        $('.am-tabs-bd li').click(function () {
+            window.location.href = 'info.html'
+        })
+    })
+</script>
+</html>

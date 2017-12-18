@@ -1,0 +1,324 @@
+body {
+  background: url(../img/-1@2x.png) no-repeat;
+  background-size: 100% 1720px;
+}
+.none {
+  display: none;
+}
+header .header-img {
+  width: 100%;
+}
+.ng-gz {
+  position: relative;
+}
+.ng-gz .gz-img {
+  display: block;
+  margin: 0 auto;
+  width: 2.27rem;
+  height: 0.64rem;
+  margin-top: 0.37rem;
+}
+.ng-gz span {
+  position: absolute;
+  top: 0.08rem;
+  left: 3.12rem;
+  font-size: 0.32rem;
+  font-family: PingFangSC-Medium;
+  color: #252525;
+}
+.gz-info {
+  width: 6.91rem;
+  margin: 0 auto;
+  background: #5d3fee;
+  border-radius: .1rem;
+  margin-bottom: .6rem ;
+}
+.gz-info ol li {
+  font-size: .26rem;
+  font-family: PingFangSC-Regular;
+  color: #ffffff;
+  line-height: 0.4rem;
+  margin-top: 0.3rem;
+  padding: 0 .34rem;
+}
+.gz-info ol li i {
+  text-align: center;
+  line-height: 0.28rem;
+  display: inline-block;
+  width: 0.28rem;
+  height: 0.28rem;
+  font-size: .24rem;
+  font-family: PingFangSC-Medium;
+  color: #873fee;
+  vertical-align: baseline;
+  background: #ffffff;
+  border-radius: 50%;
+}
+.gz-info ol li:nth-child(1) {
+  padding-top: 0.3rem;
+}
+.gz-info ol li:nth-child(4) {
+  padding-bottom: 0.3rem;
+}
+.ng-xz {
+  margin: 0 auto;
+  width: 5.30rem;
+  height: .90rem;
+  background: #3539c3;
+  border-radius: .45rem;
+}
+.ng-xz .fl {
+  margin-top: 0.12rem;
+  margin-left: 0.2rem;
+  display: inline-block;
+  position: relative;
+}
+.ng-xz .fl span {
+  position: absolute;
+  top: 0.09rem;
+  left: 0.35rem;
+  font-size: .32rem;
+  font-family: PingFangSC-Medium;
+  color: #252525;
+}
+.ng-xz .fl img {
+  width: 2.27rem;
+  height: 0.64rem;
+}
+.ng-xz .fr {
+  margin-top: 0.12rem;
+  margin-right: 0.2rem;
+  display: inline-block;
+  position: relative;
+}
+.ng-xz .fr span {
+  position: absolute;
+  top: 0.09rem;
+  left: 0.35rem;
+  font-size: .32rem;
+  font-family: PingFangSC-Medium;
+  color: #252525;
+}
+.ng-xz .fr img {
+  width: 2.27rem;
+  height: 0.64rem;
+}
+.ng-list {
+  width: 6.9rem;
+  margin: 0 auto;
+  background: #5d3fee;
+  border-radius: .10rem;
+  margin-top: 0.3rem;
+}
+.ng-list .box-1 {
+  position: relative;
+  padding-top: 0.75rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+.ng-list .box-1 .one {
+  width: 1.48rem;
+  height: 1.48rem;
+  border-radius: 50%;
+  border: 0.02rem solid #ffc618;
+}
+.ng-list .box-1 .hg {
+  position: absolute;
+  top: 1.85rem;
+  left: 2.7rem;
+  width: 0.43rem;
+  height: 0.43rem;
+}
+.ng-list .box-1 .number {
+  position: absolute;
+  left: 2.65rem;
+  top: 0.4rem;
+  width: 0.6rem;
+  height: 0.56rem;
+}
+.ng-list .box-2 {
+  margin-bottom: 0.3rem;
+}
+.ng-list .box-2 .col-xs-6 {
+  position: relative;
+}
+.ng-list .box-2 .col-xs-6 .three {
+  text-align: center;
+  width: 1.24rem;
+  height: 1.24rem;
+  border-radius: 50%;
+  border: .02rem solid #b47e33;
+  margin-left: 30%;
+}
+.ng-list .box-2 .col-xs-6 .two {
+  text-align: center;
+  width: 1.24rem;
+  height: 1.24rem;
+  border-radius: 50%;
+  border: .02rem solid #d9d9d9;
+  margin-left: 30%;
+}
+.ng-list .box-2 .col-xs-6 .hg {
+  position: absolute;
+  width: 0.43rem;
+  height: 0.43rem;
+  top: 0.85rem;
+  left: 1.2rem;
+}
+.ng-list .box-2 .col-xs-6 .number {
+  position: absolute;
+  width: 0.6rem;
+  height: 0.56rem;
+  top: -0.35rem;
+  left: 1.15rem;
+}
+.ng-list .box-3 {
+  line-height: 1.4rem;
+  border-top: 0.02rem solid #5e79ff;
+}
+.ng-list .box-3 i {
+  margin-left: 0.3rem;
+  font-size: .28rem;
+  font-family: PingFangSC-Medium;
+  color: #ffffff;
+}
+.ng-list .box-3 img {
+  margin-left: 0.22rem;
+  width: .92rem;
+  height: .92rem;
+  border-radius: 50%;
+}
+.ng-list .box-3 .name {
+  margin-left: 0.22rem;
+  display: inline-block;
+  vertical-align: middle;
+  width: 2.21rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: .28rem;
+  font-family: PingFangSC-Regular;
+  color: #fff000;
+}
+.ng-list .box-3 .number-1 {
+  display: inline-block;
+  width: 1.33rem;
+  text-align: right;
+  margin-left: 0.2rem;
+  font-size: .28rem;
+  font-family: PingFangSC-Medium;
+  color: #ffffff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ng-list .box-3 .r {
+  font-size: .26rem;
+  font-family: PingFangSC-Regular;
+  color: #ffffff;
+}
+.ng-list .box-4 {
+  height: 1.4rem;
+  border-top: 0.02rem solid #5e79ff;
+}
+.ng-list .box-4 p {
+  padding: 0;
+  margin: 0;
+  font-size: .26rem;
+  font-family: PingFangSC-Regular;
+  color: #ffffff;
+  margin-left: 0.86rem;
+}
+.ng-list .box-4 p span {
+  font-size: .28rem;
+  font-family: PingFangSC-Regular;
+  color: #fff000;
+}
+.ng-list .box-4 p i {
+  display: inline-block;
+  width: .8rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: .28rem;
+  font-family: PingFangSC-Medium;
+  color: #ffffff;
+  vertical-align: top;
+}
+.ng-list .box-4 p:nth-child(1) {
+  margin-top: 0.25rem;
+  margin-bottom: 0.1rem;
+}
+.ng-list .name-info {
+  margin-top: 0.3rem;
+}
+.ng-list .name-info p {
+  padding: 0;
+  margin: 0;
+  font-size: .26rem;
+  text-align: center;
+  color: #ffffff;
+}
+.ng-list .name-info p:nth-child(1) {
+  width: 2.21rem;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: .28rem;
+  font-family: PingFangSC-Regular;
+  color: #fff000;
+}
+.ng-list .name-info p:nth-child(3) {
+  width: 1.33rem;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+footer {
+  width: 100%;
+  margin-top: 0.4rem;
+  height: 1.30rem;
+  line-height: 1.3rem;
+  background: #4720e2;
+  position: fixed;
+  bottom: 0 ;
+}
+footer img {
+  width: 0.92rem;
+  height: 0.92rem;
+  border-radius: 50%;
+  margin-left: .49rem;
+}
+footer span {
+  font-size: .26rem;
+  font-family: PingFangSC-Regular;
+  color: #ffffff;
+}
+footer .el {
+  color: #fff000;
+  font-size: .28rem;
+  margin-left: 0.3rem;
+}
+footer .number {
+  display: inline-block;
+  margin-left: 0.89rem;
+  width: .6rem;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: .28rem;
+  vertical-align: bottom;
+}
+.img {
+  position: fixed;
+  top: 5.2rem;
+  right: 0.14rem;
+}
+.img img {
+  width: 0.96rem;
+  height: 0.96rem;
+}

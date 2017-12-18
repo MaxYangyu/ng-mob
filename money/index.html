@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="for-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>钱包明细</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/mescroll.css">
+    <link rel="stylesheet" href="option/mescroll-option.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <div class="header">
+        <span class="fl">日期</span>
+        <span class="fr">明细</span>
+    </div>
+    <!--下拉刷新回调的提示-->
+
+    <!--上拉刷新容器-->
+    <div id="mescroll" class="mescroll list" >
+            <!--数据列表-->
+            <ul id="newsList">
+                <li>
+                    <span class="fl">2017/07/09</span>
+                    <span class="fr">充值+600</span>
+                </li>
+                <li>
+                    <span class="fl">2017/07/09</span>
+                    <span class="fr">充值+600</span>
+                </li>
+                <li>
+                    <span class="fl">2017/07/09</span>
+                    <span class="fr">充值+600</span>
+                </li>
+                <li>
+                    <span class="fl">2017/07/09</span>
+                    <span class="fr">充值+600</span>
+                </li>
+                <li>
+                    <span class="fl">2017/07/09</span>
+                    <span class="fr">充值+600</span>
+                </li>
+                <li>
+                    <span class="fl">2017/07/09</span>
+                    <span class="fr">充值+600</span>
+                </li>
+                <li>
+                    <span class="fl">2017/07/09</span>
+                    <span class="fr">充值+600</span>
+                </li>
+                <li>
+                    <span class="fl">2017/07/09</span>
+                    <span class="fr">充值+600</span>
+                </li>
+                <li>
+                    <span class="fl">2017/07/09</span>
+                    <span class="fr">充值+600</span>
+                </li>
+                <li>
+                    <span class="fl">2017/07/09</span>
+                    <span class="fr">充值+600</span>
+                </li>
+                <li>
+                    <span class="fl">2017/07/09</span>
+                    <span class="fr">充值+600</span>
+                </li>
+                <li>
+                    <span class="fl">2017/07/09</span>
+                    <span class="fr">充值+600</span>
+                </li>
+                <li>
+                    <span class="fl">2017/07/09</span>
+                    <span class="fr">充值+600</span>
+                </li>
+                <li>
+                    <span class="fl">2017/07/09</span>
+                    <span class="fr">充值+600</span>
+                </li>
+                <li>
+                    <span class="fl">2017/07/09</span>
+                    <span class="fr">充值+600</span>
+                </li>
+                <li>
+                    <span class="fl">2017/07/09</span>
+                    <span class="fr">充值+600</span>
+                </li>
+            </ul>
+
+    </div>
+
+
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/mescroll.js"></script>
+<script src="option/mescroll-option.js"></script>
+
+<script>
+    $(function () {
+        var mescroll = initMeScroll("mescroll", {
+            /* down: {
+                 callback: downCallback //下拉刷新的回调
+             },*/
+            up: {
+                auto:true,
+                isBoth: true,
+                use:true,
+                auto:false,
+                isBoth:false,
+                noMoreSize:1,
+                offset:0,
+                callback: upCallback //上拉加载的回调
+            }
+        });
+        /* function downCallback() {
+             $.ajax({
+                 url: 'xxxxxx',
+                 success: function(data) {
+                     //联网成功的回调,隐藏下拉刷新的状态;
+                     mescroll.endSuccess(); //无参
+                     //设置数据
+                     //setXxxx(data);//自行实现 TODO
+                 },
+                 error: function(data) {
+                     //联网失败的回调,隐藏下拉刷新的状态
+                     mescroll.endErr();
+                 }
+             });
+         }*/
+
+        /*上拉加载的回调 page = {num:1, size:10}; num:当前页 从1开始, size:每页数据条数 */
+        function upCallback(page){
+            //联网加载数据
+            console.log("page.num="+page.num);
+            getListDataFromNet(page.num, page.size, function(data){
+                //联网成功的回调,隐藏上拉加载的状态
+                mescroll.endSuccess(data.length);//传参:数据的总数; mescroll会自动判断列表如果无任何数据,则提示空;列表无下一页数据,则提示无更多数据;
+                //设置列表数据
+                setListData(data, true);
+            }, function(){
+                //联网失败的回调,隐藏上拉加载的状态
+                mescroll.endErr();
+            });
+        }
+
+        /*设置列表数据*/
+        function setListData(data, isAppend) {
+            var listDom=document.getElementById("newsList");
+            for (var i = 0; i < data.length; i++) {
+                var newObj=data[i];
+
+                var str='<span class="fl">'+newObj.title+'</span>';
+                str+='<span class="fr">'+newObj.content+'</span>';
+                var liDom=document.createElement("li");
+                liDom.innerHTML=str;
+
+                if (isAppend) {
+                    listDom.appendChild(liDom);//加在列表的后面,上拉加载
+                } else{
+                    listDom.insertBefore(liDom, listDom.firstChild);//加在列表的前面,下拉刷新
+                }
+            }
+        }
+
+        /*联网加载列表数据*/
+        var downIndex=0;
+        function getListDataFromNet(pageNum,pageSize,successCallback,errorCallback) {
+            //延时一秒,模拟联网
+            setTimeout(function () {
+                try{
+                    var newArr=[];
+                    if(pageNum==0){
+                        //此处模拟下拉刷新返回的数据
+                        downIndex++;
+                        var newObj={title:"【新增话题"+downIndex+"】 新增话题", content:"新增话题的内容"};
+                        newArr.push(newObj);
+                    }else{
+                        //此处模拟上拉加载返回的数据
+                        for (var i = 0; i < pageSize; i++) {
+                            var upIndex=(pageNum-1)*pageSize+i+1;
+                            var newObj={title:"2017/9/"+upIndex+"/", content:"充值+600"};
+                            newArr.push(newObj);
+                        }
+                    }
+                    //联网成功的回调
+                    successCallback&&successCallback(newArr);
+                }catch(e){
+                    //联网失败的回调
+                    errorCallback&&errorCallback();
+                }
+            },2000)
+        }
+
+    })
+
+</script>
+</html>

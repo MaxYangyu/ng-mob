@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="http://static.cdn.doubo.tv/20170615/css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" href="http://static.cdn.doubo.tv/20170615/css/animate.min.css" />
+		<link rel="stylesheet" href="http://static.cdn.doubo.tv/20170615/css/doubo_style.css?v=5" />
+        <link rel="stylesheet" href="http://imgcache.qq.com/open/qcloud/video/share/css/mobile.css">
+		<title>逗播直播</title>
+	</head>
+
+	<body>
+		<div class="main">
+            <div id="PlayerContainer" class="video-play">
+                <div id="PlayerCover" class="cover cover-play-btn" style="background-image: url({{ live_cover }});"></div>
+            </div>
+			<div class="live_con" style="z-index:100;position: absolute;top:0;">
+				<div class="position_left radiu20">
+					<div class="fllow_about_left"><img src="{{ user_img }}" class="head_portrait_img radiu50"></div>
+					<div class="fllow_about_midddle">
+						<p class="about_name" ><!--style="padding-top: .05rem;"-->{{ user_name }}</p>
+						<p class="about_number"><span id="live_user_num"></span>人</p>
+					</div>
+					<div class="fllow_about_right"> <!--style="padding-top: .45rem;"-->
+						<div class="fllow_btn radiu20" style="background: #FF5069;">关注</div>
+					</div>
+				</div>
+				<!--position_left-->
+				<div class="position_right radiu20">
+					<p>打开逗播观看</p>
+				</div>
+				<!--position_right-->
+				<div class="radiu20" style="position: absolute;right: 2rem;top: 3rem;">
+					<img src="http://static.cdn.doubo.tv/20170615/img/doubo_font.png" style="height: .8rem;">
+				</div>
+                <div class="position_bottom_right radiu20" style="right: 1rem;">
+					<p>ID:{{ anchor_id }}</p>
+				</div>
+				<!--position_bottom_right-->
+			</div>
+			<!--live_con-->
+
+			<!--特效 送小礼物-->
+			<div class="gift_special_effects">
+			</div>
+			<!--gift_special_effects-->
+			<!--特效 送小礼物 end-->
+
+
+			<!--逗米充值-->
+			<div class="funny_recharge_con" style="height: auto;">
+				<div class="recharge_title">逗米充值
+					<div class="close_btn" onclick="hidPayWay();" style="width: 40px;margin:10px;"><img src="http://static.cdn.doubo.tv/20170615/img/close.png" style="width: 30px;"></div>
+				</div>
+				<div class="funny_list">
+					<ul id="payway_list">
+					</ul>
+				</div>
+				<div class="funny_pay_con" style="margin-bottom: .5rem;"><input type="button" value="微信支付" class="funny_payment_btn radiu20" style="background: #FF5069;"></div>
+			</div>
+			<!--funny_recharge_con-->
+			<!--逗米充值 end-->
+
+			<!--礼物列表-->
+			<div class="gift_list" style="display: block;padding-bottom:0;">
+				<div class="swiper-container swiper-container-horizontal">
+					<div class="swiper-wrapper">
+
+			        </div><!--swiper-wrapper-->
+        			<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                        <span class="swiper-pagination-bullet"></span>
+                    </div>
+  				</div><!--swiper-container-->
+			    <div class="funy_con" style="display: none;">
+					<div class="footer_left" id="coin_area">
+						<div class="funny_mi">逗米：<span id="coin_value">0</span> <img src="http://static.cdn.doubo.tv/20170615/img/mi.png" class="mi_img"></div>
+					</div>
+					<div class="footer_right">
+						<div class="send_funny radiu20" style="background: #FF5069;">发送</div>
+					</div>
+				</div><!--ngmob_footer-->
+ 			 </div>
+			<!--礼物列表 end-->
+
+			<!--消息列表 -->
+			<article id="wrapper" class="main_body" style="text-shadow: 1px 1px 1px #444;">
+			  <div id="public_area">
+			  </div>
+			  <!--空白div 不可去掉-->
+			</article>
+     		 <!--消息列表end-->
+
+			<!--底部 输入框-->
+			<div class="ngmob_footer" style="display: block">
+				<div class="footer_left" style="width: 11.6rem;" id="input_area">
+					<input type="text" class="footer_input radiu20" placeholder="说点什么吧..." style="width: 100%"/>
+				</div>
+				<div class="footer_right" style="padding-right: 1.6rem;float: right;width: .6rem;">
+					<div class="present_con radiu50" style="padding-top:0;background: none;"><img src="http://static.cdn.doubo.tv/20170615/img/present2.png" class="present_img" style="height: 1.5rem;"></div>
+				</div>
+			</div>
+			<!--ngmob_footer 1-->
+
+            <div class="chat_footer">
+				<div class="chat_foot_left">
+					<input type="text"  placeholder="说点什么吧..." class="chat_input" />
+				</div>
+				<div class="chat_foot_right">
+					<input type="button" value="发送" id='d' class="radiu05 send_btn"/>
+				</div>
+			</div>
+			<!--chat_footer -->
+
+		</div><!--main-->
+</body>
+<script type="text/javascript" src="http://static.cdn.doubo.tv/v2/js/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="http://static.cdn.doubo.tv/v2/js/swiper-3.4.2.min.js"></script>
+<script type="text/javascript" src="http://static.cdn.doubo.tv/v2/js/iscroll.js"></script>
+<script type="text/javascript" src="http://static.cdn.doubo.tv/socket.io.js?v=2"></script>
+<script type="text/javascript">
+    var gift_map = {};
+    var myScroll;
+    var e = navigator.userAgent.toLowerCase(), o = "ipad" == e.match(/ipad/i), t = "iphone os" == e.match(/iphone os/i), n = "android" == e.match(/android/i), s = "ontouchend"in window ? "touchend" : "click";
+
+    function isPassive() {
+        var supportsPassiveOption = false;
+        try {
+            addEventListener("test", null, Object.defineProperty({}, 'passive', {
+                get: function () {
+                    supportsPassiveOption = true;
+                }
+            }));
+        } catch(e) {}
+       return supportsPassiveOption;
+    }
+
+    function y(e, o, t) {
+        var n = document.createElement("source");
+        n.src = o;
+        n.type = t;
+        e.appendChild(n)
+    }
+
+    function f() {
+        document.querySelector("#PlayerCover").style.display = ""
+    }
+
+    function g() {
+        document.querySelector("#PlayerCover").style.display = "none"
+    }
+
+    var v = true;
+    function w(e) {
+        var i = document.querySelector("#player");
+        if (i && e.type == "timeupdate" && v) {
+            v = false;
+            g();
+            if (o || t) {
+                i.style.height = "auto"
+            }
+            if (n) {
+                window.setTimeout(function () {
+                    i.style.height = "auto"
+                }, 500)
+            }
+        }
+        if (i && e.type == "pause") {
+            v = true;
+            f()
+        }
+        if (i && e.type == "error") {
+            console.log(e)
+        }
+    }
+
+    function h() {
+        var e = document.querySelector("#PlayerContainer");
+        e.style.height = (window.innerHeight || document.documentElement.clientHeight) + "px";
+        var n = document.createElement("video"), a = "loadstart,suspend,abort,error,emptied,stalled,loadedmetadata,loadeddata,canplay,canplaythrough,playing,waiting,seeking,seeked,ended,durationchange,timeupdate,progress,play,pause,ratechange,volumechange".split(",");
+        $.each(a, function (e, o) {
+            $(n).on(o, w)
+        });
+        n.id = "player";
+        y(n, '{{ live_url }}', "application/x-mpegURL")
+        n.setAttribute("preload", "auto");
+        n.setAttribute("webkit-playsinline", "true");
+        n.setAttribute("playsinline", "true");
+        n.setAttribute("x-webkit-airplay", "true");
+        n.setAttribute("x5-video-player-type", "h5");
+        n.setAttribute("x5-video-player-fullscreen", "true");
+        n.setAttribute("style", "position: fixed;");
+        e.appendChild(n);
+        if (o || t) {
+            n.play()
+        }
+    }
+
+    $(function(){
+        var size = $(window).width() / 18;
+        $("html").css("font-size", size);
+
+        window.addEventListener("resize", function (e) {
+            var o = document.querySelector(".main"), t = document.querySelector("#PlayerContainer");
+            t.style.width = o.style.width = window.innerWidth + "px";
+            t.style.height = o.style.height = window.innerHeight + "px"
+        });
+        h();
+
+        $(document).on(s, ".main", function () {
+            var e = document.querySelector("#player");
+            if (e) {
+                g();
+                e.play();
+            }
+        });
+
+        document.onkeydown=function(event) {
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if(e && e.keyCode==13){
+                send_message();
+            }
+        };
+
+        $("#input_area").click(function(){
+            if($(".ngmob_footer").css("display")=='block') {
+                $(".live_con").hide();
+                $(".ngmob_footer").css("display", 'none');
+                $(".chat_footer").css("display", 'block');
+                $(".chat_input").focus();
+            }
+        });
+
+        $('.chat_foot_right').on('touchstart',function(e) {
+            send_message();
+        });
+
+        $(".chat_input").focus(
+            function(){
+                if($(".ngmob_footer").css("display")=='block') {
+                    $(".live_con").hide();
+                    $(".ngmob_footer").css("display", 'none');
+                    $(".chat_footer").css("display", 'block');
+                }
+            }
+        );
+
+        $(".chat_input").blur(
+            function(){
+                setTimeout(function(){
+                    // input框失去焦点
+                    if(!$(".chat_input").is(":focus") && $(".ngmob_footer").css("display")=='none') {
+                        $(".live_con").show();
+                        $(".ngmob_footer").css("display", 'block');
+                        $(".chat_footer").css("display", 'none');
+                    }
+                }, 200);
+            }
+        );
+
+        //禁止滑动，聊天有滚动条
+        myScroll = new IScroll('#wrapper', {
+            mouseWheel: true
+        });
+
+        document.addEventListener('touchmove', function(e) { e.preventDefault(); }, isPassive() ? {
+            capture: false,
+            passive: false
+        } : false);
+
+        $(".send_funny").click(function(){
+            send_gift();
+        });
+
+        $(".fllow_about_right").click(function(){
+            window.location.href = "/gotodoubo?live_id={{ live_id }}";
+        });
+
+        $(".position_right").click(function(){
+            window.location.href = "/gotodoubo?live_id={{ live_id }}";
+        });
+
+        $(".funny_payment_btn").click(function(){
+            goto_recharge();
+        });
+
+        $("body").on('touchstart','.gift_special_effects , video',function(){
+            if($('.funny_recharge_con').css("display") != 'block') {
+                $(".gift_list").hide();
+                $(".chat_input").blur();
+                $(".chat_footer").hide();
+                $(".ngmob_footer").show();
+                $(".live_con").show();
+                $(".funny_recharge_con").hide();
+                $("#wrapper").show();
+
+                myScroll.refresh();
+                myScroll.scrollTo(0,$('#wrapper').height()-$('#public_area').height());
+            }
+        });//点击空白区域 礼物隐藏
+
+        getMyCoin();
+        getGiftData();
+        getPayWayData();
+    });//$ end
+
+    function getUUID() {
+        var s = [];
+        var hexDigits = "0123456789abcdef";
+        for (var i = 0; i < 36; i++) {
+            s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+        }
+        s[14] = "4";
+        s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1);
+        s[8] = s[13] = s[18] = s[23] = "-";
+
+        var uuid = s.join("");
+        return uuid;
+    }
+
+    var flag1 = 0;
+    var flag2 = 0;
+    function getMyCoin(){
+        $.get("/onlive_getcoin?openid={{ openid }}",function(jsonData,status) {
+            if (status == "success") {
+                $('#coin_value').html(jsonData.user_coin||0);
+                flag1 = 1;
+                if(flag2 == 1) {
+                    $(".present_con").click(function () {
+                        $("#wrapper").hide();
+                        $(".funny_recharge_con").hide();
+                        $(".ngmob_footer").hide();
+                        $(".gift_list").show();
+                    });//礼物列表显示
+                }
+            }
+        });
+    }
+
+    function getGiftData(){
+        $.get("/onlive_giftlist",function(jsonData,status) {
+            if (status == "success") {
+                if (jsonData.code == 0 && eval(jsonData.data.list).length > 0) {
+                    var html = '';
+                    $.each(jsonData.data.list, function (idx, gift) {
+                        gift_map[gift.id] = gift;
+                        if(idx == 0){
+                            html = html + '<div class="swiper-slide swiper-slide-active"><div class="swiper_con_test"><ul>';
+                        }
+                        if(idx/10>0 && idx%10==0){
+                            html = html + '</ul></div></div><div class="swiper-slide swiper-slide-next"><div class="swiper_con_test"><ul>';
+                        }
+                        if(idx == 0){
+                            html = html + '<li class="swiper_selected"';
+                        }else{
+                            html = html + '<li';
+                        }
+                        html = html + ' id="gift_' + gift.id + '"><dl><dt><img src="' + gift.img + '" class="pick_img"></dt><dt>' + gift.title + '</dt><dt>' + gift.price + '逗米</dt></dl></li>';
+                    });
+                    html = html + '</ul></div></div>';
+                    $('.swiper-wrapper').append(html);
+                    var swiper = new Swiper('.swiper-container', {
+                        pagination: '.swiper-pagination',
+                        paginationClickable: true,
+                        nextButton: '.swiper-button-next',
+                        prevButton: '.swiper-button-prev',
+                        spaceBetween: 30,
+                        hashnav: true,
+                        hashnavWatchState: true
+                    });
+                    //礼物初始化隐藏
+                    $(".funy_con").show();
+                    $(".gift_list").hide();
+                    var $menu = $('.swiper_con_test ul li');
+                    $menu.click(function(){
+                        $(".swiper-slide .swiper_con_test ul li").removeClass('swiper_selected');//清空所有选中
+                        $(this).addClass('swiper_selected').siblings().removeClass('swiper_selected');
+                    });//礼物选中
+
+                    flag2 = 1;
+                    if(flag1 == 1) {
+                        $(".present_con").click(function () {
+                            $("#wrapper").hide();
+                            $(".funny_recharge_con").hide();
+                            $(".ngmob_footer").hide();
+                            $(".gift_list").show();
+                        });//礼物列表显示
+                    }
+                }
+            }
+        });
+    }
+
+    function getPayWayData(){
+        $.get("/onlive_paywaylist",function(jsonData,status) {
+            if (status == "success") {
+                if (jsonData.code == 0 && eval(jsonData.data).length > 0) {
+                    $.each(jsonData.data, function (idx, paytype) {
+                        if(paytype.id == 1){
+                            $.each(paytype.content, function (idx, payway) {
+                                var html = '<li style="height: auto;"><div id="payway_' + payway.id + '" class="theme_con';
+                                if(idx == 0){
+                                    html = html + ' funny_select';
+                                }
+                                promotion = payway.promotion
+                                if(!promotion){
+                                    promotion = '&nbsp;&nbsp;&nbsp;'
+                                }
+                                html = html + '"><p>' + payway.coin + '逗米</p><p>' + promotion + '</p><p>' + payway.showPrice + '元</p></div></li>';
+                                $('#payway_list').append(html);
+                            });
+                            var $menu2 = $('.funny_list ul li');
+                            $menu2.click(function(){
+                                $(this).children().addClass('funny_select').parent().siblings().children().removeClass('funny_select');
+                            });//充值选中
+                        }
+                    });
+                    $("#coin_area").click(function(){
+                        $(".gift_list").hide();
+                        $(".funny_recharge_con").show();
+                    });//逗米充值
+                }
+            }
+        });
+    }
+
+    function hidPayWay(){
+        $(".funny_recharge_con").hide();
+        $(".gift_list").show();
+    }
+
+</script>
+<script>
+    var socket = io.connect("{{ msg_host }}");
+    socket.on('auth', function () {
+        var auth_obj = {
+            chat_key: '{{ chat_key }}'
+        };
+        socket.emit('chat_auth', JSON.stringify(auth_obj))
+    });
+
+    socket.on('connect_success', function () {
+        var live_obj = {
+            room_id: '{{ live_id }}'
+        };
+        socket.emit('live_login', JSON.stringify(live_obj))
+    });
+
+
+    socket.on('message', function (json_msg) {
+        console.log("revieve msg from server : " + json_msg);
+        var msg;
+        try {
+            msg = JSON.parse(json_msg);
+            if(msg['msg_type'] == 'login') {
+                $("#live_user_num").html(msg['cur_user_num']);
+                showLoginMsg(msg['nick_name'], msg['content']);
+            }else if(msg['msg_type'] == 'logout'){
+                $("#live_user_num").html(msg['cur_user_num']);
+            }else if(msg['msg_type'] == 'chat'){
+                showChatMsg(msg['nick_name'],msg['rank'],msg['content']);
+            }else if(msg['msg_type'] == 'send_gift'){
+                 var gift = gift_map[msg['gift_id']];
+                showGiftMsg(msg['gift_id'],msg['user_id'],msg['nick_name'],msg['image_head_icon_url'],msg['send_num'],gift.title,gift.img);
+                showMsg(msg['nick_name'],'送了主播' + gift.title, '#ff6c92');
+            }else if(msg['msg_type'] == 'upvote'){
+                showMsg(msg['nick_name'], "点亮了",'#69ffda');
+            }else if(msg['msg_type'] == 'follow'){
+                showMsg(msg['nick_name'], msg['content'],'#41baff');
+            }else if(msg['msg_type'] == 'notice' || msg['msg_type'] == 'notice'){
+                showNoticeMsg(msg['nick_name'],msg['content']);
+            }else if(msg['msg_type'] == 'forbid'){
+                showLoginMsg(msg['nick_name'],msg['content']);
+            }else if(msg['msg_type'] == 'live_end'){
+                location.reload();
+            }else if(msg['msg_type'] == 'recharge'){
+                $("#coin_area").click();
+            }
+
+            myScroll.refresh();
+            myScroll.scrollTo(0,$('#wrapper').height()-$('#public_area').height());
+        } catch (err) {
+            console.log(err);
+            return;
+        }
+    });
+
+    socket.on('send_gift_success', function (json_msg) {
+        var msg = JSON.parse(json_msg);
+        $('#coin_value').html(msg['left_coin']);
+    });
+
+    function send_message(){
+        var e = $(".chat_input").val();
+        if (!e || e.length < 1) {
+            $(".chat_input").focus();
+            return
+        }
+
+        if (e.length > 70) {
+            e = e.substr(0,70);
+        }
+        $(".chat_input").val("");
+        socket.emit('send_message', JSON.stringify({"content":e}));
+    }
+
+    function send_gift(){
+        socket.emit('send_gift', JSON.stringify({"id": $('.swiper_selected').attr("id").replace('gift_','')}));
+    }
+
+    function goto_recharge(){
+        location.href = "/doubo/wxpay?id=" + $('.funny_select').attr("id").replace('payway_','');
+    }
+
+    function showLoginMsg(nickname, content){
+        var html = '<div class="message_overflow" style="height:auto;padding-bottom:.2rem;"><div class="ngmob_massage_right" style="width: 16.6rem;padding-left: .6rem;height:auto;"><p class="live_commen" style="font-size: .7rem;padding-top:0;"><span class="color_yellow" style="font-size: .7rem;">' + nickname + '</span>' + content + '</p></div></div>'
+        $('#public_area').append(html);
+    }
+
+    function showChatMsg(nickname, rank, content){
+        var html = '<div class="message_overflow" style="height:auto;padding-bottom:.2rem;"><div class="ngmob_massage_left" style="width:3.1rem;height:auto;"><div class="ngmob_level_bg"><img src="http://static.cdn.doubo.tv/20170615/img/ngmob_level_' + (parseInt(rank/10)+1) + '.png" class="ngmob_level_img" style="height:1rem;"/><span class="level_text" style="margin-left:1.2rem;line-height:1rem;">' + rank + '</span></div></div><div class="ngmob_massage_right" style="height:auto;padding-top:0rem;"><p class="live_commen" style="font-size: .7rem;"><span class="color_yellow"  style="font-size: .7rem;">' + nickname + '：</span>' + content + '</p></div></div>'
+        $('#public_area').append(html);
+    }
+
+    function showGiftMsg(gift_id,user_id,nickname,headimg,send_num,gift_title,gift_img){
+        var animate_id = gift_id + "_" + user_id;
+        var html;
+
+        if(document.getElementById(animate_id)) {
+            $('#' + animate_id).stop(true);
+            $('#' + animate_id).show();
+            $('#' + animate_id).removeClass('animated fadeOutUp');
+            $('#' + animate_id + '_num').html(send_num);
+
+            $('#' + animate_id).animate({
+                border: '0px'
+            }, 900, function () {
+                //回调函数内容
+                $(this).addClass('animated fadeOutUp').animate({
+                    border: '0px'
+                }, 400, function () {
+                    //回调函数内容
+                    $(this).remove();
+                });//animated fadeOutUp
+            });//littleGiftLeftShow_c 回调函数
+        }else {
+            if($('.gift_special_effects').children().length >= 2){
+                $('.gift_special_effects').children()[1].remove();
+            }
+
+            html = '<div class="ces animated bounceInLeft" id="' + animate_id + '"><div class="live_gift_con"><div class="position_left radiu20"><div class="fllow_about_left"><img src="' + headimg + '" class="head_portrait_img radiu50"></div><div class="fllow_about_midddle" style="padding-top: .25rem;"><p class="about_name" style="width: 7rem;"><nobr>' + nickname + '</nobr></p><p class="about_number" style="font-size: .67rem;">送一个' + gift_title + '</p></div><div class="fllow_about_right"><img src="' + gift_img + '" class="watermelon_img" style="right:0;"/></div><div class="gift_number_con"><img src="http://static.cdn.doubo.tv/20170615/img/ride.png" class="ride" style="height: 1.2rem;"/><span style="color: yellow;font-size: 1.8rem;" id="' + animate_id + '_num">' + send_num + '</span></div></div></div></div>'
+            $('.gift_special_effects').append(html);
+
+            $('#' + animate_id).show();
+            $('#' + animate_id).animate({
+                border: '0px'
+            }, 900, function () {
+                //回调函数内容
+                $(this).addClass('animated fadeOutUp').animate({
+                    border: '0px'
+                }, 400, function () {
+                    //回调函数内容
+                    $(this).remove();
+                });//animated fadeOutUp
+            });//littleGiftLeftShow_c 回调函数
+        }
+    }
+
+    function showMsg(nickname, content, color){
+        var html = '<div class="message_overflow" style="height:auto;padding-bottom:.2rem;"><div class="ngmob_massage_right" style="width: 16.6rem;padding-left: .6rem;height:auto;"><p class="live_commen" style="font-size: .7rem;padding-top:0;"><span class="color_yellow" style="font-size: .7rem;">' + nickname + '</span><span style="color:' + color + ';font-size: .7rem;">' + content + '</span></p></div></div>'
+        $('#public_area').append(html);
+    }
+
+    function showNoticeMsg(nickname, content){
+        var html = '<div class="message_overflow" style="height:auto;padding-bottom:.2rem;"><div class="ngmob_massage_right" style="width: 16.6rem;padding-left: .6rem;height:auto;"><p class="live_commen" style="font-size: .7rem;padding-top:0;"><span style="color:#ff6c92" style="font-size: .7rem;">' + nickname + ':' + content + '</span></p></div></div>'
+        $('#public_area').append(html);
+    }
+</script>
+</html>
+{{ wechat_plugin_str|safe }}
+<script>
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        document.getElementById('player').play();
+    }, false);
+</script>

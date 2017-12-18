@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="http://static.cdn.doubo.tv/20170615/css/doubo_style.css?v=5" />
+		<title>逗播直播</title>
+	</head>
+	<body>
+		<div class="main">
+		</div><!--main-->
+	</body>
+    <script type="text/javascript" src="http://static.cdn.doubo.tv/v2/js/jquery-1.8.2.js" ></script>
+	<script>
+        $(function() {
+            var size = $(window).width() / 18;
+            $("html").css("font-size", size);
+            getLiveData();
+        });
+
+        function enterlive(live_id){
+            location.href="/onlive/" + live_id;
+        }
+
+        function getLiveData(){
+            $.get("/onlive_livelist",function(jsonData,status) {
+                if (status == "success") {
+                    if (jsonData.code == 0) {
+                        var live_list_area = $('.main');
+                        var html_val = '';
+                        if (jsonData.live_list && eval(jsonData.live_list).length > 0) {
+                            $.each(jsonData.live_list, function (idx, live) {
+                                html_val = '<div class="live_con_sign" onclick="enterlive(\'' + live.live_id + '\');"><div class="live_neight_perent"><div class="profile_con"><div class="profile_left"><img src="' + live.headimg + '" class="avatar_img radiu50"></div><div class="profile_middle"><div class="pro_top_name_con"><p class="pro_name">' + live.username + '</p><div class="pro_level_con"><p><img src="http://static.cdn.doubo.tv/20170615/img/ngmob_level_' + (parseInt(live.rank/10)+1) + '.png" class="live_level_img"></p><p class="level_number">' + live.rank + '</p></div></div><div class="pro_top_name_con"><p><img src="http://static.cdn.doubo.tv/20170615/img/coordinate_img.png" class="coordinate_img"> <span class="city_name">' + live.location + '</span></p></div></div><div class="profile_right"><div class="pro_top_name_con"><p class="audience">' + live.user_num + '人</p></div><div class="pro_top_name_con"><p class="look_at">在看</p></div></div></div></div><div class="cover_pic_con" onclick="enterlive(\'' + live.live_id + '\');"><img src="' + live.cover + '" class="img" /><div class="live_neight_perent_i"><div class="trades_text">' + live.title + '</div></div></div></div>';
+                                live_list_area.append(html_val);
+                            });
+                        }else{
+                            live_list_area.append('<div style="text-align: center;padding-top: 100px;"><p>暂无精彩直播</p></div>');
+                        }
+                    }
+                }
+            });
+        }
+	</script>
+</html>
+{{ wechat_plugin_str|safe }}

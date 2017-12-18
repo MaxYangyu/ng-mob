@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="for-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的直播</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<header>
+    <p class="time">08.21-2017.08.30</p>
+    <p>本期直播数据</p>
+    <img src="img/arr_down@2x.png" class="fr img-responsive img-model">
+</header>
+<div class="list">
+    <div class="row">
+        <div class="col-xs-6 like">
+            <img src="img/like@2x.png" class="like-img">
+            <h2>227</h2>
+            <p>累计点赞</p>
+        </div>
+        <div class="col-xs-6 money">
+            <img src="img/add_up_ticket@2x.png" class="money-img">
+            <h2>18927</h2>
+            <p>累计逗票</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 dur">
+            <img src="img/dur@2x.png" class="dur-img">
+            <h2>19'37''</h2>
+            <p>累计时长</p>
+        </div>
+        <div class="col-xs-6 calendar">
+            <img src="img/calendar@2x.png" class="calendar-img">
+            <h2>9</h2>
+            <p>有效天数</p>
+        </div>
+    </div>
+</div>
+<div class="live">
+    <div class="head">
+        <img src="img/grade_dec@2x.png" class="live-img img-responsive">
+        <span>我的直播间</span>
+        <img src="img/grade_dec@2x.png" class="live-img img-responsive">
+    </div>
+    <div class="line-wrapper m_t07">
+        <div class="line-scroll-wrapper">
+            <div class="line-normal-wrapper">
+                <div class="line-normal-left-wrapper">
+                    <div class="line-normal-avatar-wrapper"><img src="img/npc.jpg"/></div>
+                    <div class="line-normal-info-wrapper">
+                        <div class="line-normal-user-name">挥仙女棒的小魔女</div>
+                    </div>
+                </div>
+                <div class="line-normal-icon-wrapper">
+                    管理直播间
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="line-wrapper m_t02">
+    <div class="line-scroll-wrapper">
+        <div class="line-normal-wrapper">
+            <div class="line-normal-left-wrapper">
+                <div class="line-normal-avatar-wrapper"><img src="img/npc.jpg"/></div>
+                <div class="line-normal-info-wrapper">
+                    <div class="line-normal-user-name">挥仙女棒的小魔女</div>
+                </div>
+            </div>
+            <div class="line-normal-icon-wrapper purple">
+                卸任管理员
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="live">
+    <div class="head">
+        <img src="img/grade_dec@2x.png" class="live-img img-responsive">
+        <span>其他直播间</span>
+        <img src="img/grade_dec@2x.png" class="live-img img-responsive">
+    </div>
+    <div class="line-wrapper m_t07">
+        <div class="line-scroll-wrapper">
+            <div class="line-normal-wrapper">
+                <div class="line-normal-left-wrapper">
+                    <div class="line-normal-avatar-wrapper"><img src="img/npc.jpg"/></div>
+                    <div class="line-normal-info-wrapper">
+                        <div class="line-normal-user-name">挥仙女棒的小魔女</div>
+                    </div>
+                </div>
+                <div class="line-normal-icon-wrapper">
+                    管理直播间
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="line-wrapper m_t02">
+    <div class="line-scroll-wrapper">
+        <div class="line-normal-wrapper">
+            <div class="line-normal-left-wrapper">
+                <div class="line-normal-avatar-wrapper"><img src="img/npc.jpg"/></div>
+                <div class="line-normal-info-wrapper">
+                    <div class="line-normal-user-name">挥仙女棒的小魔女</div>
+                </div>
+            </div>
+            <div class="line-normal-icon-wrapper purple">
+                卸任管理员
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="overlay">
+
+</div>
+<div class="day">
+    <div class="day-head">
+        <img src="img/arr_left@2x.png" class="day-img-l img-responsive">
+        <h2>2017.08</h2>
+        <img src="img/arr_right@2x.png" class="day-img-r img-responsive">
+    </div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide ">08.01-2017.08.10</div>
+            <div class="swiper-slide ">08.11-2017.08.20</div>
+            <div class="swiper-slide ">08.21-2017.08.30</div>
+
+        </div>
+    </div>
+
+    <div class="close-div">
+        <img src="img/black_close@2x.png" alt="" class="close-img">
+    </div>
+
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/index.js"></script>
+<script src="js/swiper-3.4.2.jquery.min.js"></script>
+<script src="js/test.js"></script>
+
+
+<script>
+
+    $(function () {
+        $('.time').html($('.swiper-slide-active').html())
+        var mySwiper = new Swiper('.swiper-container',{
+            virtualTranslate : true,
+            setWrapperSize :true,
+            initialSlide :2,
+            direction : 'vertical',
+            speed:300,
+            slidesPerView :'auto',
+            onClick:function (swiper) {
+                console.log(swiper.clickedSlide)
+                $('.time').html($(swiper.clickedSlide).html())
+                $($(swiper.clickedSlide).siblings()).removeClass('swiper-slide-active')
+                $(swiper.clickedSlide).addClass('swiper-slide-active')
+             $('.day').css('display','none');
+                hideOverlay();
+            }
+        });
+    })
+
+</script>
+</html>

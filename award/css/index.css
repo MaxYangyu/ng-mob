@@ -1,0 +1,739 @@
+#Thank {
+  background-color: #0400A1;
+}
+#Thank footer {
+  height: 1.3rem;
+  line-height: 1.3rem;
+  text-align: center;
+  margin: 0 auto;
+  font-size: .26rem;
+  font-family: PingFangSC-Regular;
+  color: #fff;
+}
+#Thank .none {
+  display: none;
+}
+#Thank .no {
+  height: 2.64rem;
+  font-size: .34rem;
+  line-height: 2.64rem;
+}
+#Thank .no p {
+  font-size: .34rem;
+}
+#Thank header > img {
+  width: 100%;
+}
+#Thank .image-two {
+  width: 6.86rem;
+  background: #601bff;
+  border-radius: .08rem;
+  margin: 0 auto;
+  text-align: center;
+  font-size: .30rem;
+  font-family: PingFangSC-Regular;
+  color: #ffffff;
+}
+#Thank .image-two .title {
+  padding-top: 0.5rem;
+  font-size: .36rem;
+  font-family: PingFangSC-Regular;
+  color: #ffffff;
+  margin-bottom: 0.65rem;
+}
+#Thank .image-two .title b {
+  color: #04EFF6;
+  font-weight: 400;
+}
+#Thank .image-two .left {
+  position: relative;
+  right: .63rem;
+  display: inline-block;
+}
+#Thank .image-two .left img {
+  width: 1.62rem;
+  height: 1.25rem;
+  margin-bottom: 0.46rem;
+}
+#Thank .image-two .left p {
+  padding-bottom: 0.82rem;
+}
+#Thank .image-two .right {
+  left: .63rem;
+  display: inline-block;
+  position: relative;
+}
+#Thank .image-two .right img {
+  width: 1.62rem;
+  height: 1.25rem;
+  margin-bottom: 0.46rem;
+}
+#Thank .image-two .right p {
+  padding-bottom: 0.82rem;
+}
+#Thank .ng-for {
+  margin-top: 0.79rem;
+}
+#Thank .ng-for .list-title {
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  width: 5.30rem;
+  height: .90rem;
+  line-height: .9rem;
+  text-align: center;
+  background: #3539c3;
+  border-radius: .45rem ;
+  font-size: .32rem;
+  font-family: PingFangSC-Medium;
+  border: 0.02rem solid #5e79ff;
+}
+#Thank .ng-for .list-title div {
+  display: inline-block;
+}
+#Thank .ng-for .list-title .list-left p {
+  position: relative;
+  right: .16rem;
+  width: 2.27rem;
+  background: url("../img/主播榜@2x.png") no-repeat center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+#Thank .ng-for .list-title .list-right p {
+  position: relative;
+  left: .16rem;
+  width: 2.27rem;
+  background: url("../img/玩家榜@2x.png") no-repeat center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+#Thank .ng-for .anchor-list {
+  width: 6.87rem;
+  border-radius: 0.1rem;
+  margin: 0 auto;
+  text-align: center;
+  background: #601bff;
+}
+#Thank .ng-for .anchor-list .list-box {
+  font-size: .24rem;
+}
+#Thank .ng-for .anchor-list .list-box .list-name {
+  padding-top: .81rem;
+}
+#Thank .ng-for .anchor-list .list-box .list-name span {
+  display: inline-block;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #fff;
+}
+#Thank .ng-for .anchor-list .list-box .list-name span:nth-child(1) {
+  /*margin-left: 0.38rem;*/
+}
+#Thank .ng-for .anchor-list .list-box .list-name span:nth-child(2) {
+  margin-left: .9rem;
+}
+#Thank .ng-for .anchor-list .list-box .list-name span:nth-child(3) {
+  width: 1.1rem;
+  padding-right: .15rem;
+  margin-left: 1.25rem;
+  text-align: center;
+}
+#Thank .ng-for .anchor-list .list-box .list-name span:nth-child(4) {
+  margin-left: 1.2rem;
+}
+#Thank .ng-for .anchor-list .list-box .list-data {
+  margin-top: 0.5rem;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #fad978;
+}
+#Thank .ng-for .anchor-list .list-box .list-data > span {
+  display: inline-block;
+  font-size: .26rem;
+  font-family: PingFangSC-Regular;
+  color: #fff;
+  margin-left: 0.4rem;
+  vertical-align: sub;
+}
+#Thank .ng-for .anchor-list .list-box .list-data .sz {
+  font-size: .30rem;
+  font-weight: 700;
+  color: #fff;
+}
+#Thank .ng-for .anchor-list .list-box .list-data > div {
+  margin-left: 0.7rem;
+  position: relative;
+  display: inline-block;
+}
+#Thank .ng-for .anchor-list .list-box .list-data > div .ps {
+  position: relative;
+}
+#Thank .ng-for .anchor-list .list-box .list-data > div .img {
+  margin-left: 0.14rem;
+  width: .98rem;
+  height: .98rem;
+  border-radius: 50%;
+  z-index: 999;
+}
+#Thank .ng-for .anchor-list .list-box .list-data > div .one {
+  margin: 0;
+  width: 1.14rem;
+  height: 1.14rem;
+  border: 0.02rem solid #FFCB2C;
+}
+#Thank .ng-for .anchor-list .list-box .list-data > div .two {
+  margin: 0;
+  width: 1.14rem;
+  height: 1.14rem;
+  border: 0.02rem solid #CFD1D2;
+}
+#Thank .ng-for .anchor-list .list-box .list-data > div .three {
+  margin: 0;
+  width: 1.14rem;
+  height: 1.14rem;
+  border: 0.02rem solid #AD7C64;
+}
+#Thank .ng-for .anchor-list .list-box .list-data > div span {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  width: .96rem;
+  height: .26rem;
+  font-size: .20rem;
+  font-family: PingFangSC-Medium;
+  color: #1F1F1F;
+  line-height: .26rem;
+  background: #FECA40;
+  bottom: 0;
+  left: 8%;
+  z-index: 9999;
+}
+#Thank .ng-for .anchor-list .list-box .list-data > div .hg {
+  position: absolute;
+  width: .65rem;
+  height: .6rem;
+  z-index: 21;
+  top: -0.2rem;
+  left: -0.24rem;
+}
+#Thank .ng-for .anchor-list .list-box .list-data > div .bg {
+  position: absolute;
+  width: 1.32rem;
+  height: .25rem;
+  z-index: 22;
+  left: -6%;
+  bottom: 0.05rem;
+}
+#Thank .ng-for .anchor-list .list-box .list-data .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: 2.10rem;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #fff;
+  text-align: center;
+  padding-left: 0.165rem;
+  /* margin-left: 0.1rem;*/
+}
+#Thank .ng-for .anchor-list .list-box .list-data b {
+  display: inline-block;
+  font-weight: 400;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #fff;
+  margin-left: 0.38rem;
+  text-align: center;
+  width: 1.26rem;
+  white-space: nowrap;
+  /* overflow: hidden;*/
+  text-overflow: ellipsis;
+  /*vertical-align: sub;*/
+}
+#Thank .ng-for .anchor-list .list-box div:last-child {
+  padding-bottom: 0.5rem;
+}
+#Thank .ng-for .anchor-list .foot {
+  width: 6.87rem;
+  height: 1.57rem;
+  line-height: 1.57rem;
+  background: #4d16cb;
+}
+#Thank .ng-for .anchor-list .foot img {
+  width: 1.14rem;
+  height: 1.14rem;
+  border-radius: 50%;
+  vertical-align: text-top;
+}
+#Thank .ng-for .anchor-list .foot span {
+  margin-left: 0.39rem;
+  display: inline-block;
+  width: 2rem;
+  font-size: .26rem;
+  font-family: PingFangSC-Regular;
+  color: #fff;
+  text-align: left;
+  vertical-align: top;
+}
+#Thank .ng-for .anchor-list .foot i {
+  vertical-align: sub;
+  display: inline-block;
+  vertical-align: top;
+  font-size: .26rem;
+  font-family: PingFangSC-Regular;
+  color: #fff;
+  margin-left: 1.1rem;
+}
+#Thank .gz {
+  margin-top: 0.8rem;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #ffffff;
+}
+#Thank .gz .gz-title {
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  font-size: .32rem;
+  font-family: PingFangSC-Medium;
+}
+#Thank .gz .gz-title p {
+  margin: 0 auto;
+  text-align: center;
+  width: 2.27rem;
+  height: .64rem;
+  line-height: .64rem;
+  font-size: .32rem;
+  font-family: PingFangSC-Medium;
+  color: #252525;
+  background: url("../img/主播榜@2x.png") no-repeat center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+#Thank .gz .info {
+  margin: 0 auto;
+  width: 6.86rem;
+  background: #601bff;
+  border-radius: 0.1rem ;
+  padding-left: 0.35rem;
+  padding-right: 0.4rem;
+}
+#Thank .gz .info .box-one .box-info {
+  padding-top: 0.4rem;
+  margin-bottom: 0.3rem;
+}
+#Thank .gz .info .box-one .box-info img {
+  width: .16rem;
+  height: .20rem;
+}
+#Thank .gz .info .box-one .box-info span {
+  font-size: .32rem;
+  font-family: PingFangSC-Regular;
+  color: #04eff6;
+  vertical-align: middle;
+}
+#Thank .gz .info .box-one p {
+  line-height: 0.4rem;
+}
+#Thank .gz .info .box-info {
+  padding-top: 0.4rem;
+  margin-bottom: 0.3rem;
+}
+#Thank .gz .info .box-info img {
+  width: .16rem;
+  height: .20rem;
+}
+#Thank .gz .info .box-info span {
+  font-weight: 700;
+  font-size: .32rem;
+  font-family: PingFangSC-Regular;
+  color: #04eff6;
+  vertical-align: middle;
+}
+#Thank .gz .info .jl {
+  color: #FFF;
+}
+#Thank .gz .info .jl > p {
+  margin-top: 0.3rem;
+  font-size: .28rem;
+  font-family: STYuanti-SC-Bold;
+  color: #FFF;
+}
+#Thank .gz .info .jl .box {
+  margin: 0 auto;
+  margin-top: 0.23rem;
+  width: 5.25rem;
+  border: 0.02rem solid #FFF;
+}
+#Thank .gz .info .jl .box p span:nth-child(1) {
+  display: inline-block;
+  width: 1.7rem;
+  text-align: center;
+  line-height: .65rem;
+  border-right: 0.02rem solid #FFF;
+  border-bottom: 0.02rem solid #FFF;
+}
+#Thank .gz .info .jl .box p span:nth-child(2) {
+  display: inline-block;
+  width: 3.5rem;
+  text-align: center;
+  line-height: .65rem;
+  border-bottom: 0.02rem solid #FFF;
+}
+#Thank .gz .info .jl .box p:last-child span:nth-child(1) {
+  border-bottom: none;
+}
+#Thank .gz .info .jl .box p:last-child span:nth-child(2) {
+  border-bottom: none;
+}
+#Thank .btn {
+  width: .68rem;
+  height: 1.7rem;
+  position: fixed;
+  top: 4.54rem;
+  right: 0;
+}
+#Thank .last {
+  height: 1.66rem;
+  width: .68rem;
+  position: fixed;
+  top: 2.78rem;
+  right: 0;
+}
+#Thank .last-list {
+  width: 100%;
+  z-index: 200000;
+  top: 2.35rem;
+  position: relative;
+}
+#Thank .last-list > img {
+  position: absolute;
+  right: 0.18rem;
+  top: .45rem;
+  width: .48rem;
+  height: .48rem;
+}
+#Thank .last-list .list-title {
+  position: relative;
+  top: .2rem;
+  margin: 0 auto;
+  width: 5.30rem;
+  height: .90rem;
+  line-height: .9rem;
+  text-align: center;
+  background: #3539c3;
+  border-radius: .45rem ;
+  font-size: .32rem;
+  font-family: PingFangSC-Medium;
+  border: 0.02rem solid #5e79ff;
+}
+#Thank .last-list .list-title div {
+  display: inline-block;
+}
+#Thank .last-list .list-title .list-left p {
+  position: relative;
+  right: .16rem;
+  width: 2.27rem;
+  background: url("../img/主播榜@2x.png") no-repeat center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+#Thank .last-list .list-title .list-right p {
+  position: relative;
+  left: .16rem;
+  width: 2.27rem;
+  background: url("../img/玩家榜@2x.png") no-repeat center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+#Thank .last-list .list {
+  margin: 0 auto;
+  margin-top: 0.6rem;
+  width: 6.86rem;
+  border-radius: .1rem ;
+  background: #601bff;
+}
+#Thank .last-list .list .list-box {
+  font-size: .24rem;
+}
+#Thank .last-list .list .list-box .list-name {
+  /*margin-top: 0.42rem;*/
+}
+#Thank .last-list .list .list-box .list-name span {
+  display: inline-block;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #fad978;
+}
+#Thank .last-list .list .list-box .list-name span:nth-child(1) {
+  margin-left: 0.38rem;
+}
+#Thank .last-list .list .list-box .list-name span:nth-child(2) {
+  margin-left: .9rem;
+}
+#Thank .last-list .list .list-box .list-name span:nth-child(3) {
+  margin-left: 1.56rem;
+}
+#Thank .last-list .list .list-box .list-name span:nth-child(4) {
+  margin-left: 1.3rem;
+}
+#Thank .last-list .list .list-box .list-data {
+  margin-top: 0.5rem;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #fad978;
+}
+#Thank .last-list .list .list-box .list-data > span {
+  display: inline-block;
+  font-size: .26rem;
+  font-family: PingFangSC-Regular;
+  color: #fad978;
+  margin-left: 0.4rem;
+  vertical-align: sub;
+}
+#Thank .last-list .list .list-box .list-data .sz {
+  font-size: .30rem;
+  font-weight: 700;
+  color: #fad978;
+}
+#Thank .last-list .list .list-box .list-data > div {
+  margin-left: 0.7rem;
+  position: relative;
+  display: inline-block;
+}
+#Thank .last-list .list .list-box .list-data > div .ps {
+  position: relative;
+}
+#Thank .last-list .list .list-box .list-data > div .img {
+  margin-left: 0.14rem;
+  width: .98rem;
+  height: .98rem;
+  border-radius: 50%;
+  z-index: 999;
+}
+#Thank .last-list .list .list-box .list-data > div .one {
+  margin: 0;
+  width: 1.14rem;
+  height: 1.14rem;
+  border: 0.02rem solid #FFCB2C;
+}
+#Thank .last-list .list .list-box .list-data > div .two {
+  margin: 0;
+  width: 1.14rem;
+  height: 1.14rem;
+  border: 0.02rem solid #CFD1D2;
+}
+#Thank .last-list .list .list-box .list-data > div .three {
+  margin: 0;
+  width: 1.14rem;
+  height: 1.14rem;
+  border: 0.02rem solid #AD7C64;
+}
+#Thank .last-list .list .list-box .list-data > div span {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  width: .96rem;
+  height: .26rem;
+  font-size: .20rem;
+  font-family: PingFangSC-Medium;
+  color: #1f1f1f;
+  line-height: .26rem;
+  background: #ffcb2c;
+  bottom: 0;
+  left: 8%;
+  z-index: 9999;
+}
+#Thank .last-list .list .list-box .list-data > div .hg {
+  position: absolute;
+  width: .65rem;
+  height: .6rem;
+  z-index: 21;
+  top: -0.2rem;
+  left: -0.24rem;
+}
+#Thank .last-list .list .list-box .list-data > div .bg {
+  position: absolute;
+  width: 1.32rem;
+  height: .25rem;
+  z-index: 22;
+  left: -6%;
+  bottom: 0.05rem;
+}
+#Thank .last-list .list .list-box .list-data .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: 2.10rem;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #fad978;
+  text-align: center;
+  /* margin-left: 0.1rem;*/
+}
+#Thank .last-list .list .list-box .list-data b {
+  display: inline-block;
+  font-weight: 400;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #fad978;
+  margin-left: 0.38rem;
+  text-align: center;
+  width: .6rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: sub;
+}
+#Thank .last-list .list .list-box {
+  font-size: .24rem;
+}
+#Thank .last-list .list .list-box .list-name {
+  padding-top: .6rem;
+}
+#Thank .last-list .list .list-box .list-name span {
+  display: inline-block;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #fff;
+}
+#Thank .last-list .list .list-box .list-name span:nth-child(1) {
+  /*margin-left: 0.38rem;*/
+}
+#Thank .last-list .list .list-box .list-name span:nth-child(2) {
+  margin-left: .9rem;
+}
+#Thank .last-list .list .list-box .list-name span:nth-child(3) {
+  width: 1.1rem;
+  padding-right: .15rem;
+  margin-left: 1.25rem;
+  text-align: center;
+}
+#Thank .last-list .list .list-box .list-name span:nth-child(4) {
+  margin-left: 1.2rem;
+}
+#Thank .last-list .list .list-box .list-data {
+  margin-top: 0.5rem;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #fad978;
+}
+#Thank .last-list .list .list-box .list-data > span {
+  display: inline-block;
+  font-size: .26rem;
+  font-family: PingFangSC-Regular;
+  color: #fff;
+  margin-left: 0.4rem;
+  vertical-align: sub;
+}
+#Thank .last-list .list .list-box .list-data .sz {
+  font-size: .30rem;
+  font-weight: 700;
+  color: #fff;
+}
+#Thank .last-list .list .list-box .list-data > div {
+  margin-left: 0.7rem;
+  position: relative;
+  display: inline-block;
+}
+#Thank .last-list .list .list-box .list-data > div .ps {
+  position: relative;
+}
+#Thank .last-list .list .list-box .list-data > div .img {
+  margin-left: 0.14rem;
+  width: .98rem;
+  height: .98rem;
+  border-radius: 50%;
+  z-index: 999;
+}
+#Thank .last-list .list .list-box .list-data > div .one {
+  margin: 0;
+  width: 1.14rem;
+  height: 1.14rem;
+  border: 0.02rem solid #FFCB2C;
+}
+#Thank .last-list .list .list-box .list-data > div .two {
+  margin: 0;
+  width: 1.14rem;
+  height: 1.14rem;
+  border: 0.02rem solid #CFD1D2;
+}
+#Thank .last-list .list .list-box .list-data > div .three {
+  margin: 0;
+  width: 1.14rem;
+  height: 1.14rem;
+  border: 0.02rem solid #AD7C64;
+}
+#Thank .last-list .list .list-box .list-data > div span {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  width: .96rem;
+  height: .26rem;
+  font-size: .20rem;
+  font-family: PingFangSC-Medium;
+  color: #1F1F1F;
+  line-height: .26rem;
+  background: #FECA40;
+  bottom: 0;
+  left: 8%;
+  z-index: 9999;
+}
+#Thank .last-list .list .list-box .list-data > div .hg {
+  position: absolute;
+  width: .65rem;
+  height: .6rem;
+  z-index: 21;
+  top: -0.2rem;
+  left: -0.24rem;
+}
+#Thank .last-list .list .list-box .list-data > div .bg {
+  position: absolute;
+  width: 1.32rem;
+  height: .25rem;
+  z-index: 22;
+  left: -6%;
+  bottom: 0.05rem;
+}
+#Thank .last-list .list .list-box .list-data .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: 2.10rem;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #fff;
+  text-align: center;
+  padding-left: 0.165rem;
+  /* margin-left: 0.1rem;*/
+}
+#Thank .last-list .list .list-box .list-data b {
+  display: inline-block;
+  font-weight: 400;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  color: #fff;
+  margin-left: 0.38rem;
+  text-align: center;
+  width: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: sub;
+}
+#Thank .last-list .list .list-box div:last-child {
+  padding-bottom: 0.5rem;
+}
+#Thank #overlay {
+  background: #000;
+  filter: alpha(opacity=50);
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: none;
+}

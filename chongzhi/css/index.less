@@ -1,0 +1,114 @@
+@font-face {
+  font-family: number-font;
+  src: url('../font/HelveticaNeue-BoldCond.otf') format('OpenType');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+body {
+  background-color: #f0f0f1;
+}
+
+.title {
+
+  background-color: #fff;
+  font-size: 0.28rem;
+  color: #1f1f25;
+  .ali {
+    line-height: 1rem;
+    text-align: center;
+  }
+  .wx {
+    line-height: 1rem;
+    text-align: center;
+  }
+  .active {
+    border-bottom: 0.04rem solid #f60549;
+  }
+  .alipay {
+    width: 0.42rem;
+    height: 0.4rem;
+  }
+  .weixin {
+    width: 0.42rem;
+    height: 0.4rem;
+  }
+}
+
+.info {
+  margin-top: 0.34rem;
+  .box {
+    text-align: center;
+    padding: 0;
+    width: 2.14rem;
+    height: 2.5rem;
+    background-color: #fff;
+    border: 0.01rem solid #dbdbdb;
+    border-radius: 0.06rem;
+    box-shadow: 0 0 5px #919fb6;
+    p {
+      padding: 0;
+      margin: 0;
+    }
+    p:nth-child(1) {
+      font-family: number-font;
+      margin-top: 0.3rem;
+      font-weight: 700;
+      font-size: 0.6rem;
+      color: #1f1f25;
+    }
+    p:nth-child(2) {
+      font-size: 0.26rem;
+      color: #788296;
+    }
+    p:nth-child(3) {
+      width: 1rem;
+      height: .48rem;
+      line-height: 0.48rem;
+      background-color: #f60549;
+      border-radius: .24rem;
+      margin: 0 auto;
+      margin-top: 0.3rem;
+      font-size: 0.28rem;
+      color: #fff;
+    }
+    p:nth-child(4) {
+      position: absolute;
+      top: 0;
+      left: 12%;
+      margin: 0 auto;
+      width: 1.68rem;
+      height: .3rem;
+      line-height: .3rem;
+      color: #fff;
+      font-size: .22rem;
+      background: -webkit-linear-gradient(#ffba00, #ff7c00); /* Safari 5.1 - 6.0 */
+      background: -o-linear-gradient(#ffba00, #ff7c00); /* Opera 11.1 - 12.0 */
+      background: -moz-linear-gradient(#ffba00, #ff7c00); /* Firefox 3.6 - 15 */
+      background: linear-gradient(#ffba00, #ff7c00); /* 标准的语法 */
+      border-radius: 0 0 .14rem .14rem;
+    }
+  }
+  .box-left {
+    margin-left: 0.495rem;
+  }
+  .box-center {
+    margin-left: 0.34rem;
+    margin-right: 0.34rem;
+  }
+  .box-right {
+    /* margin-right: 0.34rem;*/
+  }
+}
+
+.box-2 {
+  position: relative;
+}
+
+.none {
+  display: none;
+}

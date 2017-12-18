@@ -1,0 +1,73 @@
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.root {
+  margin: 2.5rem auto;
+  background-color: #fff;
+  font-size: 0.24rem;
+}
+.root header {
+  padding: 0.3rem 0;
+}
+.root header p {
+  font-weight: 700;
+  font-size: .30rem;
+  text-align: center;
+}
+.root form p {
+  margin: 0.3rem 0;
+}
+.root form p label {
+  display: block;
+  text-align: center;
+}
+.root form p label input {
+  border: 1px solid #7F9DB9;
+}
+.root form p label #tel {
+  margin-right: .55rem;
+}
+.root form p #site {
+  border: 1px solid #7F9DB9;
+  resize: none;
+  width: 4rem;
+  height: 2rem;
+  vertical-align: text-top;
+}
+.root form p #btn {
+  display: block;
+  margin: 0 auto;
+}
+.root > p {
+  font-size: 0.16rem;
+  text-align: center;
+}
+.wl {
+  margin: 3.5rem auto;
+  background-color: #fff;
+  font-size: 0.24rem;
+}
+.wl header {
+  padding: 0.3rem 0;
+}
+.wl header p {
+  font-weight: 700;
+  font-size: .30rem;
+  text-align: center;
+}
+.wl .info {
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+.wl .info p {
+  width: 4rem;
+  margin: 0 auto;
+  border: 0.02rem solid #000;
+  font-size: .28rem;
+}
+.wl > p {
+  font-size: 0.16rem;
+  text-align: center;
+}
